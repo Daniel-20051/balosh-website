@@ -53,9 +53,9 @@ export default function BlogContent() {
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 md:space-y-8">
       {/* Search and Filter Bar */}
-      <div className="flex flex-col md:flex-row gap-4 items-center justify-between bg-gray-50 p-4 rounded-lg">
+      <div className="flex flex-col md:flex-row gap-3 md:gap-4 items-center justify-between bg-gray-50 p-3 md:p-4 rounded-lg">
         {/* Search Input */}
         <div className="flex-1 max-w-md">
           <input
@@ -63,7 +63,7 @@ export default function BlogContent() {
             placeholder="Search articles..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+            className="w-full px-3 md:px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm md:text-base"
           />
         </div>
 
@@ -72,7 +72,7 @@ export default function BlogContent() {
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white"
+            className="px-3 md:px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white text-sm md:text-base"
           >
             {categories.map((category) => (
               <option key={category} value={category}>
@@ -87,7 +87,7 @@ export default function BlogContent() {
           {["AI", "Cloud", "Security", "Analytics"].map((tag) => (
             <button
               key={tag}
-              className="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-orange-100 hover:text-orange-700 transition-colors duration-200"
+              className="px-2 md:px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs md:text-sm hover:bg-orange-100 hover:text-orange-700 transition-colors duration-200"
             >
               {tag}
             </button>
@@ -96,35 +96,35 @@ export default function BlogContent() {
       </div>
 
       {/* Blog Posts */}
-      <div className="space-y-8">
+      <div className="space-y-6 md:space-y-8">
         {blogPosts.map((post) => (
           <BlogPostCard key={post.id} post={post} />
         ))}
       </div>
 
       {/* Pagination */}
-      <div className="flex justify-center items-center space-x-2 pt-8">
-        <button className="px-4 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200">
+      <div className="flex justify-center items-center space-x-2 pt-6 md:pt-8">
+        <button className="px-3 md:px-4 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm md:text-base">
           ← Previous
         </button>
 
         <div className="flex space-x-1">
-          <button className="px-3 py-2 bg-orange-500 text-white rounded-lg">
+          <button className="px-2 md:px-3 py-2 bg-orange-500 text-white rounded-lg text-sm md:text-base">
             1
           </button>
-          <button className="px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200">
+          <button className="px-2 md:px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm md:text-base">
             2
           </button>
-          <button className="px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200">
+          <button className="px-2 md:px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm md:text-base">
             3
           </button>
-          <span className="px-3 py-2 text-gray-600">...</span>
-          <button className="px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200">
+          <span className="px-2 md:px-3 py-2 text-gray-600 text-sm md:text-base">...</span>
+          <button className="px-2 md:px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm md:text-base">
             12
           </button>
         </div>
 
-        <button className="px-4 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200">
+        <button className="px-3 md:px-4 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm md:text-base">
           Next →
         </button>
       </div>
