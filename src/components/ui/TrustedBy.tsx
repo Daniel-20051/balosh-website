@@ -1,91 +1,212 @@
 "use client";
 import React, { useState, useRef } from "react";
+import Image from "next/image";
 
 const TrustedBy = () => {
-  const [isHovered, setIsHovered] = useState(false);
-  const carouselRef = useRef<HTMLDivElement>(null);
+  const [isHovered1, setIsHovered1] = useState(false);
+  const [isHovered2, setIsHovered2] = useState(false);
+  const carouselRef1 = useRef<HTMLDivElement>(null);
+  const carouselRef2 = useRef<HTMLDivElement>(null);
 
-  const companies = [
-    {
-      name: "FCMB",
-      logo: (
-        <div className="bg-purple-600 text-white px-4 py-2 rounded flex items-center justify-center font-bold text-lg">
-          <div className="flex flex-col">
-            <div className="bg-yellow-400 h-1 w-full mb-1"></div>
-            <span>FCMB</span>
-            <div className="bg-yellow-400 h-1 w-full mt-1"></div>
-          </div>
-        </div>
-      ),
-    },
-    {
-      name: "IKOYI CLUB 1938",
-      logo: (
-        <div className="text-center">
-          <div className="text-2xl font-bold text-gray-800 mb-1">IKOYI</div>
-          <div className="w-8 h-8 bg-orange-500 rounded-full mx-auto mb-1 flex items-center justify-center">
-            <div className="w-6 h-6 bg-orange-600 rounded-full"></div>
-          </div>
-          <div className="text-xs text-gray-600">CLUB 1938</div>
-        </div>
-      ),
-    },
+  const companies1 = [
     {
       name: "Lagos Free Zone",
       logo: (
-        <div className="text-center">
-          <div className="text-2xl font-bold text-red-600 mb-1">LFZ</div>
-          <div className="text-sm text-gray-700">Lagos Free Zone</div>
-        </div>
+        <Image
+          src="/assets/lagos-free-zone.png"
+          alt="Lagos Free Zone"
+          width={200}
+          height={200}
+        />
       ),
     },
     {
-      name: "LABUTH",
+      name: "Atlantic Hall",
       logo: (
-        <div className="w-16 h-16 bg-green-600 rounded-full border-2 border-white flex items-center justify-center text-white font-bold text-sm">
-          LABUTH
-        </div>
+        <Image
+          src="/assets/atlantic-hall.png"
+          alt="Atlantic Hall"
+          width={200}
+          height={200}
+        />
       ),
     },
     {
-      name: "LAGOS POLO CLUB",
+      name: "Chicken Republic",
       logo: (
-        <div className="w-16 h-16 bg-blue-600 rounded-full border-2 border-white flex items-center justify-center text-white text-center">
-          <div className="text-xs">
-            <div className="font-bold">LAGOS</div>
-            <div className="font-bold">POLO CLUB</div>
-            <div className="text-xs">SINCE 1904</div>
-          </div>
-        </div>
+        <Image
+          src="/assets/chicken-republic.png"
+          alt="Chicken Republic"
+          width={200}
+          height={200}
+        />
       ),
     },
+    {
+      name: "Love World",
+      logo: (
+        <Image
+          src="/assets/love-world.png"
+          alt="Love World"
+          width={200}
+          height={200}
+        />
+      ),
+    },
+    {
+      name: "EKEDC",
+      logo: (
+        <Image src="/assets/ekedc.png" alt="EKEDC" width={200} height={200} />
+      ),
+    },
+    {
+      name: "faan",
+      logo: (
+        <Image src="/assets/faan.png" alt="FAAN" width={200} height={200} />
+      ),
+    },
+    {
+      name: "FCMB",
+      logo: (
+        <Image src="/assets/fcmb.png" alt="FCMB" width={200} height={200} />
+      ),
+    },
+    {
+      name: "IKOYI CLUB",
+      logo: (
+        <Image
+          src="/assets/ikoyi.png"
+          alt="IKOYI CLUB"
+          width={200}
+          height={200}
+        />
+      ),
+    },
+    {
+      name: "LASUTH",
+      logo: (
+        <Image src="/assets/lasuth.png" alt="LASUTH" width={200} height={200} />
+      ),
+    },
+    {
+      name: "POLO CLUB",
+      logo: (
+        <Image
+          src="/assets/polo-club.png"
+          alt="POLO CLUB"
+          width={200}
+          height={200}
+        />
+      ),
+    },
+  ];
+
+  const companies2 = [
     {
       name: "LIVING FAITH CHURCH",
       logo: (
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-1">
-            <div className="w-6 h-6 bg-red-500 rounded-full mr-1"></div>
-            <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
-          </div>
-          <div className="text-sm font-bold text-red-600">
-            LIVING FAITH CHURCH
-          </div>
-        </div>
+        <Image
+          src="/assets/living-faith.png"
+          alt="LIVING FAITH CHURCH"
+          width={200}
+          height={200}
+        />
       ),
     },
     {
       name: "Marriott",
       logo: (
-        <div className="text-center">
-          <div className="text-2xl font-bold text-red-600 italic">Marriott</div>
-          <div className="text-xs text-red-600">HOTELS • RESORTS • SUITES</div>
-        </div>
+        <Image
+          src="/assets/marriott.png"
+          alt="Marriott"
+          width={200}
+          height={200}
+        />
+      ),
+    },
+    {
+      name: "Nigerian Breweries",
+      logo: (
+        <Image
+          src="/assets/nigerian-breweries.png"
+          alt="Nigerian Breweries"
+          width={200}
+          height={200}
+        />
+      ),
+    },
+    {
+      name: "Providus Bank",
+      logo: (
+        <Image
+          src="/assets/providus.png"
+          alt="Providus Bank"
+          width={200}
+          height={200}
+        />
+      ),
+    },
+    {
+      name: "Oniru Royal",
+      logo: (
+        <Image
+          src="/assets/oniru-royal.png"
+          alt="Oniru Royal"
+          width={200}
+          height={200}
+        />
+      ),
+    },
+    {
+      name: "RCCG",
+      logo: (
+        <Image src="/assets/rccg.png" alt="RCCG" width={200} height={200} />
+      ),
+    },
+    {
+      name: "Schlumberger",
+      logo: (
+        <Image
+          src="/assets/schlumberger.png"
+          alt="Schlumberger"
+          width={200}
+          height={200}
+        />
+      ),
+    },
+    {
+      name: "VGCPORA",
+      logo: (
+        <Image
+          src="/assets/vgcpora.png"
+          alt="VGCPORA"
+          width={200}
+          height={200}
+        />
+      ),
+    },
+    {
+      name: "WINGS",
+      logo: (
+        <Image src="/assets/wings.png" alt="WINGS" width={200} height={200} />
+      ),
+    },
+    {
+      name: "Present House",
+      logo: (
+        <Image
+          src="/assets/present-house.png"
+          alt="Present House"
+          width={200}
+          height={200}
+        />
       ),
     },
   ];
 
-  // Duplicate companies for seamless infinite scroll
-  const duplicatedCompanies = [...companies, ...companies, ...companies];
+  // For seamless infinite scroll, duplicate the array once
+  const seamlessCompanies1 = [...companies1, ...companies1];
+  const seamlessCompanies2 = [...companies2, ...companies2];
 
   return (
     <section className="py-10 overflow-hidden">
@@ -101,22 +222,47 @@ const TrustedBy = () => {
           technology solutions.
         </p>
 
-        {/* Carousel Container */}
-        <div className="relative overflow-hidden">
+        {/* First Carousel - Left */}
+        <div className="relative overflow-hidden mb-8">
           <div
-            ref={carouselRef}
-            className="flex gap-8 items-center py-4"
+            ref={carouselRef1}
+            className="flex items-center py-4 whitespace-nowrap"
             style={{
-              animation: "scroll 30s linear infinite",
-              animationPlayState: isHovered ? "paused" : "running",
+              animation: "scrollLeft 30s linear infinite",
+              animationPlayState: isHovered1 ? "paused" : "running",
+              width: "max-content",
             }}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onMouseEnter={() => setIsHovered1(true)}
+            onMouseLeave={() => setIsHovered1(false)}
           >
-            {duplicatedCompanies.map((company, index) => (
+            {seamlessCompanies1.map((company, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 flex items-center justify-center w-48 h-24 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
+                className="flex-shrink-0 flex items-center justify-center w-48 h-24"
+              >
+                {company.logo}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Second Carousel - Right */}
+        <div className="relative overflow-hidden">
+          <div
+            ref={carouselRef2}
+            className="flex items-center py-4 whitespace-nowrap"
+            style={{
+              animation: "scrollRight 30s linear infinite",
+              animationPlayState: isHovered2 ? "paused" : "running",
+              width: "max-content",
+            }}
+            onMouseEnter={() => setIsHovered2(true)}
+            onMouseLeave={() => setIsHovered2(false)}
+          >
+            {seamlessCompanies2.map((company, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 flex items-center justify-center w-48 h-24"
               >
                 {company.logo}
               </div>
@@ -125,12 +271,20 @@ const TrustedBy = () => {
         </div>
 
         <style jsx>{`
-          @keyframes scroll {
+          @keyframes scrollLeft {
             0% {
               transform: translateX(0);
             }
             100% {
-              transform: translateX(-${companies.length * 12}rem);
+              transform: translateX(-50%);
+            }
+          }
+          @keyframes scrollRight {
+            0% {
+              transform: translateX(-50%);
+            }
+            100% {
+              transform: translateX(0);
             }
           }
         `}</style>
