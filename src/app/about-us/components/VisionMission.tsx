@@ -19,14 +19,14 @@ export default function VisionMission() {
         rootMargin: "0px 0px -100px 0px",
       }
     );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const ref = sectionRef.current;
+    if (ref) {
+      observer.observe(ref);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (ref) {
+        observer.unobserve(ref);
       }
     };
   }, []);
@@ -144,8 +144,8 @@ export default function VisionMission() {
                   <p className="text-[#9CA3AF] leading-relaxed">
                     To deliver world-class access control solutions through
                     innovation, integrity, and customer-centricity, while
-                    maintaining our position as Nigeria's most trusted security
-                    technology partner.
+                    maintaining our position as Nigeria&apos;s most trusted
+                    security technology partner.
                   </p>
                 </div>
               </div>

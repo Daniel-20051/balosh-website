@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Badge from "@/components/ui/Badge";
-import Link from "next/link";
 
 export default function HowWeWork() {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,13 +20,14 @@ export default function HowWeWork() {
       }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const ref = sectionRef.current;
+    if (ref) {
+      observer.observe(ref);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (ref) {
+        observer.unobserve(ref);
       }
     };
   }, []);

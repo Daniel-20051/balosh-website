@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new window.IntersectionObserver(
+    const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
@@ -18,12 +19,13 @@ export default function HeroSection() {
         rootMargin: "0px 0px -100px 0px",
       }
     );
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const ref = sectionRef.current;
+    if (ref) {
+      observer.observe(ref);
     }
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (ref) {
+        observer.unobserve(ref);
       }
     };
   }, []);
@@ -32,10 +34,12 @@ export default function HeroSection() {
     <section className="relative w-full min-h-[320px] h-[420px] md:h-[600px] flex items-center overflow-hidden">
       {/* Background image overlay */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src="/images/solutions-hero.jpg"
           alt="Modern secure entrance"
-          className="w-full h-full object-cover object-center"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
         />
         <div className="absolute inset-0 bg-black/50" />
       </div>

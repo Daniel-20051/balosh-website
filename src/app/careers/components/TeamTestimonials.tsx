@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -39,13 +40,15 @@ export default function TeamTestimonials() {
               className="bg-white p-8 rounded-lg shadow-sm border border-gray-100"
             >
               <blockquote className="text-gray-600 leading-relaxed mb-6 italic">
-                "{testimonial.quote}"
+                &quot;{testimonial.quote}&quot;
               </blockquote>
 
               <div className="flex items-center">
-                <img
+                <Image
                   src={testimonial.image}
                   alt={testimonial.name}
+                  width={48}
+                  height={48}
                   className="w-12 h-12 rounded-full object-cover mr-4"
                   loading="lazy"
                 />

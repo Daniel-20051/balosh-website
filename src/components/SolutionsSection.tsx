@@ -35,14 +35,14 @@ export default function SolutionsSection({ solutions }: SolutionsSectionProps) {
         rootMargin: "0px 0px -100px 0px",
       }
     );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const ref = sectionRef.current;
+    if (ref) {
+      observer.observe(ref);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (ref) {
+        observer.unobserve(ref);
       }
     };
   }, []);

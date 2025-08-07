@@ -2,6 +2,7 @@
 
 import Badge from "@/components/ui/Badge";
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 const projects = [
   {
@@ -80,14 +81,14 @@ export default function ProjectHighlights() {
         rootMargin: "0px 0px -100px 0px",
       }
     );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const ref = sectionRef.current;
+    if (ref) {
+      observer.observe(ref);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (ref) {
+        observer.unobserve(ref);
       }
     };
   }, []);
@@ -118,8 +119,8 @@ export default function ProjectHighlights() {
             Project <span className="text-primary">Highlights</span>
           </h2>
           <p className="text-lg text-[#525252] max-w-2xl mx-auto mb-4">
-            Discover how we've transformed operations for leading organizations
-            across Nigeria
+            Discover how we&apos;ve transformed operations for leading
+            organizations across Nigeria
           </p>
         </div>
 
@@ -139,9 +140,11 @@ export default function ProjectHighlights() {
               <div className="group bg-white rounded-2xl border-1 border-[#E5E5E5] overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer">
                 {/* Image Container */}
                 <div className="relative h-48 overflow-hidden">
-                  <img
+                  <Image
                     src={project.image}
                     alt={project.title}
+                    width={400}
+                    height={250}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />

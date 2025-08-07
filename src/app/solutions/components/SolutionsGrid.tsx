@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 const solutions = [
   {
@@ -121,13 +122,14 @@ export default function SolutionsGrid() {
       }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const ref = sectionRef.current;
+    if (ref) {
+      observer.observe(ref);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (ref) {
+        observer.unobserve(ref);
       }
     };
   }, []);
@@ -176,11 +178,12 @@ export default function SolutionsGrid() {
               <div className="group bg-white border-1 border-[#E5E7EB] rounded-xl w-full overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer">
                 {/* Image Container */}
                 <div className="relative h-48 overflow-hidden w-full">
-                  <img
+                  <Image
                     src={solution.image}
                     alt={solution.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
+                    width={400}
+                    height={300}
                   />
                   {/* Badge */}
                   <div
@@ -222,11 +225,12 @@ export default function SolutionsGrid() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 items-center">
                   {/* Image Container */}
                   <div className="relative h-56 sm:h-64 lg:h-full overflow-hidden w-full">
-                    <img
+                    <Image
                       src={solution.image}
                       alt={solution.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
+                      width={400}
+                      height={300}
                     />
                     {/* Badge */}
                     <div

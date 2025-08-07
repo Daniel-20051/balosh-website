@@ -48,6 +48,10 @@ function ImpactCard({ number, label, suffix = "+" }: ImpactCardProps) {
     }, duration / steps);
   };
 
+  useEffect(() => {
+    animateCount();
+  }, [animateCount]);
+
   return (
     <div
       ref={cardRef}

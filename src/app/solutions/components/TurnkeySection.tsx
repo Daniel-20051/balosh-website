@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 export default function TurnkeySection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,13 +20,14 @@ export default function TurnkeySection() {
       }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const ref = sectionRef.current;
+    if (ref) {
+      observer.observe(ref);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (ref) {
+        observer.unobserve(ref);
       }
     };
   }, []);
@@ -43,10 +45,12 @@ export default function TurnkeySection() {
         >
           {/* Left Column - Image */}
           <div className="relative">
-            <img
+            <Image
               src="https://picsum.photos/600/400?random=10"
               alt="Turnkey Project Delivery - Team collaboration"
               className="w-full h-auto rounded-lg shadow-lg"
+              width={600}
+              height={400}
               loading="lazy"
             />
           </div>

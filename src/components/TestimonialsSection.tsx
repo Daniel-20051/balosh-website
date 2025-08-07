@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 interface Testimonial {
   id: number;
@@ -149,7 +150,7 @@ export default function TestimonialsSection() {
                   key={`quote-${currentIndex}`}
                   className="text-xl md:text-2xl text-gray-700 text-center mb-8 leading-relaxed italic animate-slideIn"
                 >
-                  "{testimonials[currentIndex].quote}"
+                  &quot;{testimonials[currentIndex].quote}&quot;
                 </blockquote>
 
                 {/* Author Info */}
