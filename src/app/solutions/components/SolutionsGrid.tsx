@@ -117,7 +117,7 @@ export default function SolutionsGrid() {
         }
       },
       {
-        threshold: 0.15,
+        threshold: 0.1,
         rootMargin: "0px 0px -50px 0px",
       }
     );
@@ -137,7 +137,7 @@ export default function SolutionsGrid() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-white px-4 py-10 md:px-10 md:py-20 overflow-hidden"
+      className="relative bg-white px-4 py-8 md:px-10 md:py-20 overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0">
@@ -149,21 +149,21 @@ export default function SolutionsGrid() {
       <div className="max-w-7xl mx-auto px-0 sm:px-4 relative z-10">
         {/* Header */}
         <div
-          className={`text-center mb-10 md:mb-16 transition-all duration-1000 ease-out ${
+          className={`text-center mb-8 md:mb-16 transition-all duration-1000 ease-out ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
             Our <span className="text-primary">Solutions</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm md:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
             Comprehensive technology solutions tailored to your specific
             industry and operational requirements
           </p>
         </div>
 
         {/* Solutions Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {solutions.slice(0, 6).map((solution, index) => (
             <div
               key={index}
@@ -177,7 +177,7 @@ export default function SolutionsGrid() {
             >
               <div className="group bg-white border-1 border-[#E5E7EB] rounded-xl w-full overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer">
                 {/* Image Container */}
-                <div className="relative h-48 overflow-hidden w-full">
+                <div className="relative h-40 md:h-48 overflow-hidden w-full">
                   <Image
                     src={solution.image}
                     alt={solution.title}
@@ -194,11 +194,11 @@ export default function SolutionsGrid() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors duration-200">
+                <div className="p-4 md:p-6">
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-primary transition-colors duration-200">
                     {solution.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4 leading-relaxed">
                     {solution.description}
                   </p>
                 </div>
@@ -213,7 +213,7 @@ export default function SolutionsGrid() {
           .map((solution, index) => (
             <div
               key={solution.title}
-              className={`mt-12 transition-all duration-1000 ease-out delay-${
+              className={`mt-8 md:mt-12 transition-all duration-1000 ease-out delay-${
                 (index + 7) * 100
               } ${
                 isVisible
@@ -222,9 +222,9 @@ export default function SolutionsGrid() {
               }`}
             >
               <div className="group bg-[#FBF8F4] border-1 border-primary/20 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer w-full">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 items-center">
                   {/* Image Container */}
-                  <div className="relative h-56 sm:h-64 lg:h-full overflow-hidden w-full">
+                  <div className="relative h-48 sm:h-56 lg:h-full overflow-hidden w-full">
                     <Image
                       src={solution.image}
                       alt={solution.title}
@@ -241,11 +241,11 @@ export default function SolutionsGrid() {
                   </div>
 
                   {/* Content */}
-                  <div className="flex flex-col px-4 sm:px-8 gap-4 py-8 sm:py-12 lg:py-20 lg:col-span-2 w-full">
-                    <div className="flex mb-4">
-                      <div className="w-15 h-15 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
+                  <div className="flex flex-col px-4 sm:px-6 lg:px-8 gap-3 md:gap-4 py-6 md:py-8 lg:py-12 lg:col-span-2 w-full">
+                    <div className="flex mb-3 md:mb-4">
+                      <div className="w-12 h-12 md:w-15 md:h-15 bg-orange-100 rounded-lg flex items-center justify-center mr-3 md:mr-4">
                         <svg
-                          className="w-8 h-8 text-orange-500"
+                          className="w-6 h-6 md:w-8 md:h-8 text-orange-500"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
@@ -254,15 +254,15 @@ export default function SolutionsGrid() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold mb-5 text-7 text-gray-900 transition-colors duration-200">
+                      <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-5 text-7 text-gray-900 transition-colors duration-200">
                         {solution.title}
                       </h3>
-                      <p className="text-[#525252] text-2 mb-6 leading-relaxed text-lg">
+                      <p className="text-sm md:text-base text-[#525252] text-2 mb-4 md:mb-6 leading-relaxed">
                         {solution.description}
                       </p>
                       <a
                         href={solution.href}
-                        className="inline-flex items-center text-primary font-semibold text-lg hover:underline transition-colors duration-200"
+                        className="inline-flex items-center text-primary font-semibold text-sm md:text-lg hover:underline transition-colors duration-200"
                       >
                         Learn More &rarr;
                       </a>

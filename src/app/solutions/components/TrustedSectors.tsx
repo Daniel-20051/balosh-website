@@ -172,7 +172,7 @@ export default function TrustedSectors() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#F9FAFB] py-20 overflow-hidden"
+      className="relative bg-[#F9FAFB] py-12 md:py-20 overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0">
@@ -184,7 +184,7 @@ export default function TrustedSectors() {
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Header with Badge */}
         <div
-          className={`text-center mb-16 transition-all duration-1000 ease-out ${
+          className={`text-center mb-12 md:mb-16 transition-all duration-1000 ease-out ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -202,17 +202,17 @@ export default function TrustedSectors() {
             text="Industries We Serve"
           />
 
-          <h2 className="text-3xl md:text-4xl mt-8 font-bold text-black mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl mt-6 md:mt-8 font-bold text-black mb-3 md:mb-4">
             Trusted Across <span className="text-primary">Every Sector</span>
           </h2>
-          <p className="text-lg text-[#525252] max-w-2xl mx-auto">
+          <p className="text-sm md:text-base lg:text-lg text-[#525252] max-w-2xl mx-auto">
             From shopping centers to government facilities, our solutions power
             security and automation worldwide
           </p>
         </div>
 
         {/* Industry Cards Grid */}
-        <div className="grid  grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-16">
           {sectors.map((sector, index) => (
             <div
               key={index}
@@ -225,17 +225,17 @@ export default function TrustedSectors() {
               }`}
             >
               <div
-                className={`absolute  h-30 w-30 -right-12 -top-12  ${sector.insetColor} rounded-full flex items-center justify-center mb-6 mx-auto shadow-sm`}
+                className={`absolute h-24 w-24 md:h-30 md:w-30 -right-8 -top-8 md:-right-12 md:-top-12 ${sector.insetColor} rounded-full flex items-center justify-center mb-4 md:mb-6 mx-auto shadow-sm`}
               ></div>
-              <div className="group  border-1 border-[#E5E5E5] bg-white rounded-2xl  py-13 px-9 hover:shadow-lg transition-all duration-300 cursor-pointer">
+              <div className="group border-1 border-[#E5E5E5] bg-white rounded-2xl py-8 md:py-13 px-6 md:px-9 hover:shadow-lg transition-all duration-300 cursor-pointer">
                 {/* Icon with gradient background */}
                 <div
-                  className={`w-16 h-16 ${sector.color} rounded-xl flex items-center justify-center mb-6 mx-auto shadow-sm`}
+                  className={`w-12 h-12 md:w-16 md:h-16 ${sector.color} rounded-xl flex items-center justify-center mb-4 md:mb-6 mx-auto shadow-sm`}
                 >
                   <div className="text-white">
                     {sector.title === "Shopping Malls" ? (
                       <svg
-                        className="w-8 h-8"
+                        className="w-6 h-6 md:w-8 md:h-8"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -248,12 +248,12 @@ export default function TrustedSectors() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center transition-colors duration-200">
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 md:mb-4 text-center transition-colors duration-200">
                   {sector.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-[#525252] text-[14px] leading-relaxed text-center">
+                <p className="text-xs md:text-sm text-[#525252] leading-relaxed text-center">
                   {sector.description}
                 </p>
               </div>
@@ -262,23 +262,23 @@ export default function TrustedSectors() {
         </div>
 
         {/* Statistics Section */}
-        <div className="bg-white  max-w-2xl rounded-2xl shadow-md p-4 border border-gray-100">
-          <div className="grid grid-cols-3 gap-4 md:gap-8">
+        <div className="bg-white max-w-2xl rounded-2xl shadow-md p-4 border border-gray-100">
+          <div className="grid grid-cols-3 gap-3 md:gap-4 lg:gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="flex items-center gap-4">
+              <div key={index} className="flex items-center gap-2 md:gap-4">
                 {/* Icon with light orange background */}
-                <div className="w-8  md:w-12 h-8 md:h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                <div className="w-8 md:w-10 lg:w-12 h-8 md:h-10 lg:h-12 bg-orange-100 rounded-lg flex items-center justify-center">
                   <div className="text-orange-500">{stat.icon}</div>
                 </div>
 
                 <div>
                   {/* Number */}
-                  <div className="text-sm md:text-[16px] font-bold  mb-1">
+                  <div className="text-xs md:text-sm lg:text-base font-bold mb-1">
                     {stat.number}
                   </div>
 
                   {/* Label */}
-                  <div className="text-[#525252] text-[12px] md:text-[14px] font-medium">
+                  <div className="text-[#525252] text-xs md:text-sm font-medium">
                     {stat.label}
                   </div>
                 </div>

@@ -96,12 +96,12 @@ export default function ProjectHighlights() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-white py-20 overflow-hidden"
+      className="relative bg-white py-12 md:py-20 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Header */}
         <div
-          className={`text-center mb-16 transition-all duration-1000 ease-out ${
+          className={`text-center mb-12 md:mb-16 transition-all duration-1000 ease-out ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -115,17 +115,17 @@ export default function ProjectHighlights() {
             text="Client Success Stories"
           />
 
-          <h2 className="text-3xl md:text-4xl mt-8 font-bold text-black mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl mt-6 md:mt-8 font-bold text-black mb-3 md:mb-4">
             Project <span className="text-primary">Highlights</span>
           </h2>
-          <p className="text-lg text-[#525252] max-w-2xl mx-auto mb-4">
+          <p className="text-sm md:text-base lg:text-lg text-[#525252] max-w-2xl mx-auto mb-3 md:mb-4">
             Discover how we&apos;ve transformed operations for leading
             organizations across Nigeria
           </p>
         </div>
 
         {/* Project Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -139,7 +139,7 @@ export default function ProjectHighlights() {
             >
               <div className="group bg-white rounded-2xl border-1 border-[#E5E5E5] overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer">
                 {/* Image Container */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-40 md:h-48 overflow-hidden">
                   <Image
                     src={project.image}
                     alt={project.title}
@@ -157,21 +157,21 @@ export default function ProjectHighlights() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
+                <div className="p-4 md:p-6">
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors duration-200">
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-primary transition-colors duration-200">
                     {project.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-3 md:mb-4">
                     {project.description}
                   </p>
 
                   {/* Details */}
-                  <div className="flex items-center gap-2 mb-4">
+                  <div className="flex items-center gap-2 mb-3 md:mb-4">
                     <div className="text-gray-500">{project.detailIcon}</div>
-                    <span className="text-gray-600 text-sm font-medium">
+                    <span className="text-gray-600 text-xs md:text-sm font-medium">
                       {project.detailText}
                     </span>
                   </div>
@@ -179,7 +179,7 @@ export default function ProjectHighlights() {
                   {/* Call to Action */}
                   <a
                     href={project.href}
-                    className="inline-flex items-center text-primary font-semibold text-sm hover:underline transition-colors duration-200"
+                    className="inline-flex items-center text-primary font-semibold text-xs md:text-sm hover:underline transition-colors duration-200"
                   >
                     View Details &rarr;
                   </a>

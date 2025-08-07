@@ -31,7 +31,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full min-h-[320px] h-[420px] md:h-[600px] flex items-center overflow-hidden">
+    <section className="relative w-full min-h-[280px] h-[350px] md:h-[600px] flex items-center overflow-hidden">
       {/* Background image overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -50,7 +50,7 @@ export default function HeroSection() {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8"
         }`}
       >
-        <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 md:mb-10 leading-tight">
+        <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-6 lg:mb-10 leading-tight">
           Custom-Built Solutions for
           <span className="text-primary font-bold">
             {" "}
@@ -58,15 +58,15 @@ export default function HeroSection() {
           </span>{" "}
           Spaces
         </h1>
-        <p className="text-sm sm:text-base md:text-lg text-[#F5F5F5]/90 mb-6 max-w-xl md:max-w-2xl mx-auto">
+        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-[#F5F5F5]/90 mb-4 md:mb-6 max-w-xl md:max-w-2xl mx-auto">
           From access control to fare automation, we tailor every solution to
           your operational needs.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto">
-          <button className="w-full sm:w-auto bg-primary text-[#E5E7EB] cursor-pointer font-semibold px-8 py-4 rounded-md shadow hover:bg-primary/90 transition-colors text-base">
+        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full max-w-md mx-auto">
+          <button className="w-full sm:w-auto bg-primary text-[#E5E7EB] cursor-pointer font-semibold px-6 md:px-8 py-3 md:py-4 rounded-md shadow hover:bg-primary/90 transition-colors text-sm md:text-base">
             Get Started Today
           </button>
-          <button className="w-full sm:w-auto border border-white text-white cursor-pointer font-semibold px-8 py-3 rounded-md hover:bg-white hover:text-primary transition-colors text-base">
+          <button className="w-full sm:w-auto border border-white text-white cursor-pointer font-semibold px-6 md:px-8 py-2 md:py-3 rounded-md hover:bg-white hover:text-primary transition-colors text-sm md:text-base">
             Learn More
           </button>
         </div>
