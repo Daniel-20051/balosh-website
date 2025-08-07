@@ -1,12 +1,8 @@
 interface SolutionCardProps {
-  icon: React.ReactNode;
   title: string;
   description: string;
-  features: string[];
-  href: string;
+  icon: React.ReactNode;
   iconBgColor: string;
-  linkColor: string;
-  hoverBorderColor: string;
 }
 
 export default function SolutionCard({
@@ -14,10 +10,7 @@ export default function SolutionCard({
   title,
   description,
   features,
-  href,
   iconBgColor,
-  linkColor,
-  hoverBorderColor,
 }: SolutionCardProps) {
   return (
     <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-orange-200 overflow-hidden h-full flex flex-col">

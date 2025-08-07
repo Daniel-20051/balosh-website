@@ -5,10 +5,9 @@ import React, { useState, useEffect } from "react";
 const NewsLetter = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
+    // setIsMounted(true); // This line is removed as per the edit hint.
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const cultureCards = [
   {
@@ -41,14 +42,14 @@ export default function LifeAtBalosh() {
               key={index}
               className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow duration-300"
             >
-              <div className="h-48 overflow-hidden">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
+              <Image
+                src={card.image}
+                alt={card.title}
+                width={400}
+                height={250}
+                className="w-full h-48 object-cover rounded-t-lg"
+                loading="lazy"
+              />
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {card.title}

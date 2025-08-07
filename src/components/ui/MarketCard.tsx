@@ -2,14 +2,12 @@ interface MarketCardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
-  href: string;
 }
 
 export default function MarketCard({
   icon,
   title,
   description,
-  href,
 }: MarketCardProps) {
   return (
     <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-orange-200">

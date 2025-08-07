@@ -9,7 +9,7 @@ export default function CareersHeader() {
         </h1>
         <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
           Join our team of innovators and help shape the future of technology.
-          We're building something extraordinary and looking for passionate
+          We&apos;re building something extraordinary and looking for passionate
           people to join our mission.
         </p>
       </div>

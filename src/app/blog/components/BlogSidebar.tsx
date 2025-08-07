@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 const categories = [
   "Technology",
@@ -79,10 +80,12 @@ export default function BlogSidebar() {
         <div className="space-y-4">
           {recentPosts.map((post, index) => (
             <div key={index} className="flex gap-3">
-              <img
+              <Image
                 src={post.image}
                 alt={post.title}
-                className="w-12 h-12 rounded object-cover flex-shrink-0"
+                width={60}
+                height={60}
+                className="w-15 h-15 rounded object-cover"
                 loading="lazy"
               />
               <div className="flex-1 min-w-0">

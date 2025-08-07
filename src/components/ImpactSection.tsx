@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 
 interface ImpactCardProps {
   number: number;
@@ -12,6 +12,23 @@ function ImpactCard({ number, label, suffix = "+" }: ImpactCardProps) {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
+
+  const animateCount = useCallback(() => {
+    const duration = 2000; // 2 seconds
+    const steps = 60;
+    const increment = number / steps;
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= number) {
+        setCount(number);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(current));
+      }
+    }, duration / steps);
+  }, [number]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -29,24 +46,7 @@ function ImpactCard({ number, label, suffix = "+" }: ImpactCardProps) {
     }
 
     return () => observer.disconnect();
-  }, [isVisible]);
-
-  const animateCount = () => {
-    const duration = 2000; // 2 seconds
-    const steps = 60;
-    const increment = number / steps;
-    let current = 0;
-
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= number) {
-        setCount(number);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(current));
-      }
-    }, duration / steps);
-  };
+  }, [isVisible, animateCount]);
 
   useEffect(() => {
     animateCount();
