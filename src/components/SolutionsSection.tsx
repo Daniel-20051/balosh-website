@@ -98,7 +98,6 @@ export default function SolutionsSection({ solutions }: SolutionsSectionProps) {
                 icon={solution.icon}
                 title={solution.title}
                 description={solution.description}
-                features={solution.features}
                 iconBgColor={solution.iconBgColor}
               />
             </div>

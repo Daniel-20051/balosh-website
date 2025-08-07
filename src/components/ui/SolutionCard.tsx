@@ -9,7 +9,6 @@ export default function SolutionCard({
   icon,
   title,
   description,
-  features,
   iconBgColor,
 }: SolutionCardProps) {
   return (
@@ -45,31 +44,6 @@ export default function SolutionCard({
         <p className="text-gray-600 mb-8 leading-relaxed text-base group-hover:text-gray-700 transition-colors duration-300">
           {description}
         </p>
-
-        {/* Features list with enhanced styling */}
-        <ul className="space-y-3 mb-8 flex-grow">
-          {features.map((feature, index) => (
-            <li
-              key={index}
-              className="flex items-center text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300"
-            >
-              <div className="flex-shrink-0 w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3 group-hover:bg-green-200 transition-colors duration-300">
-                <svg
-                  className="w-3 h-3 text-green-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <span className="font-medium">{feature}</span>
-            </li>
-          ))}
-        </ul>
       </div>
     </div>
   );
