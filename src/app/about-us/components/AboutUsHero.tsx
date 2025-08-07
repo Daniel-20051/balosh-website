@@ -36,7 +36,7 @@ export default function AboutUsHero() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-gradient-to-br from-white via-orange-50/30 to-orange-100/20 py-20 overflow-hidden"
+      className="relative bg-gradient-to-br from-white via-orange-50/30 to-orange-100/20 py-10 md:py-16 overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0">
@@ -54,12 +54,12 @@ export default function AboutUsHero() {
               </svg>
             }
             text="About Balosh"
-            className="mb-8"
+            className="mb-6"
           />
 
           {/* Main Heading */}
           <h1
-            className={`text-5xl md:text-7xl font-bold text-gray-900 mb-8 transition-all duration-1000 ease-out delay-200 ${
+            className={`text-3xl sm:text-4xl md:text-6xl font-bold text-gray-900 mb-4 md:mb-8 transition-all duration-1000 ease-out delay-200 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-8"
@@ -70,7 +70,7 @@ export default function AboutUsHero() {
 
           {/* Description */}
           <p
-            className={`text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed transition-all duration-1000 ease-out delay-400 ${
+            className={`text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl md:max-w-4xl mx-auto mb-8 md:mb-12 leading-relaxed transition-all duration-1000 ease-out delay-400 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-8"
@@ -84,7 +84,7 @@ export default function AboutUsHero() {
 
           {/* Call to Action Buttons */}
           <div
-            className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-1000 ease-out delay-600 ${
+            className={`flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center transition-all duration-1000 ease-out delay-600 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-8"
@@ -92,13 +92,13 @@ export default function AboutUsHero() {
           >
             <Link
               href="/solutions"
-              className="bg-orange-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="bg-orange-500 text-white px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Our Solutions
             </Link>
             <Link
               href="/contact"
-              className="bg-transparent text-primary border-2 border-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-orange-50 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="bg-transparent text-primary border-2 border-primary px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg font-semibold hover:bg-orange-50 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Contact Us
             </Link>

@@ -95,7 +95,7 @@ const Header = () => {
 
           {/* Mobile Carousel Layout */}
           <div className="md:hidden">
-            <div className="flex items-center justify-center space-x-8 text-sm animate-scroll">
+            <div className="flex items-center justify-center space-x-4 text-xs px-2 py-2">
               <a
                 href="mailto:info@balosh.com"
                 className="hover:text-orange-300 transition-colors duration-200 whitespace-nowrap"
@@ -115,7 +115,7 @@ const Header = () => {
                 aria-label="Instagram"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-3 h-3 md:w-5 md:h-5"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
@@ -129,7 +129,7 @@ const Header = () => {
                 aria-label="X"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-3 h-3 md:w-5 md:h-5"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
@@ -143,7 +143,7 @@ const Header = () => {
                 aria-label="LinkedIn"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-3 h-3 md:w-5 md:h-5"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
@@ -157,7 +157,7 @@ const Header = () => {
                 aria-label="Facebook"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-3 h-3 md:w-5 md:h-5"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
