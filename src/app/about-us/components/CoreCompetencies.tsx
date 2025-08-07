@@ -15,7 +15,7 @@ export default function CoreCompetencies() {
         }
       },
       {
-        threshold: 0.25,
+        threshold: 0.15,
         rootMargin: "0px 0px -100px 0px",
       }
     );
@@ -82,14 +82,14 @@ export default function CoreCompetencies() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-white py-20 overflow-hidden"
+      className="relative bg-white py-12 md:py-20 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Header Section */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           {/* Main Title */}
           <h2
-            className={`text-4xl md:text-5xl font-bold text-gray-900 mb-4 transition-all duration-1000 ease-out ${
+            className={`text-2xl md:text-5xl font-bold text-gray-900 mb-4 transition-all duration-1000 ease-out ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-8"
@@ -100,7 +100,7 @@ export default function CoreCompetencies() {
 
           {/* Subtitle */}
           <p
-            className={`text-lg text-gray-600 max-w-2xl mx-auto mb-8 transition-all duration-1000 ease-out delay-200 ${
+            className={`text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-6 md:mb-8 transition-all duration-1000 ease-out delay-200 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-8"
@@ -128,7 +128,7 @@ export default function CoreCompetencies() {
         </div>
 
         {/* Competencies Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {competencies.map((competency, index) => (
             <div
               key={index}
@@ -142,18 +142,18 @@ export default function CoreCompetencies() {
             >
               {/* Icon */}
               <div
-                className={`w-16 h-16 ${competency.color} rounded-xl flex items-center justify-center mx-auto mb-6`}
+                className={`w-14 h-14 md:w-16 md:h-16 ${competency.color} rounded-xl flex items-center justify-center mx-auto mb-4 md:mb-6`}
               >
                 <div className="text-white">{competency.icon}</div>
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 md:mb-4">
                 {competency.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                 {competency.description}
               </p>
             </div>

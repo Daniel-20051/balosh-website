@@ -14,8 +14,8 @@ export default function MeetTheTeam() {
         }
       },
       {
-        threshold: 0.25,
-        rootMargin: "0px 0px -100px 0px",
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px",
       }
     );
 
@@ -70,13 +70,13 @@ export default function MeetTheTeam() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-gray-50 py-20 overflow-hidden"
+      className="relative bg-gray-50 py-12 md:py-20 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Header Section */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <h2
-            className={`text-4xl md:text-5xl font-bold text-gray-900 transition-all duration-1000 ease-out ${
+            className={`text-2xl md:text-5xl font-bold text-gray-900 transition-all duration-1000 ease-out ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-8"
@@ -87,31 +87,33 @@ export default function MeetTheTeam() {
         </div>
 
         {/* Team Members Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className={`bg-[linear-gradient(to_right,_#FFFFFF_0%,_#F9FAFB_100%)] border-1 border-[#E5E7EB]  p-8 rounded-2xl hover:shadow-xl transition-all ${
+              className={`bg-[linear-gradient(to_right,_#FFFFFF_0%,_#F9FAFB_100%)] border-1 border-[#E5E7EB]  p-6 md:p-8 rounded-2xl hover:shadow-xl transition-all ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
               }`}
             >
               {/* Profile Image */}
-              <div className="flex justify-center mb-6">{member.image}</div>
+              <div className="flex justify-center mb-4 md:mb-6">
+                {member.image}
+              </div>
 
               {/* Name */}
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
                 {member.name}
               </h3>
 
               {/* Title */}
-              <p className="text-orange-500 text-base font-medium mb-4">
+              <p className="text-orange-500 text-sm md:text-base font-medium mb-3 md:mb-4">
                 {member.title}
               </p>
 
               {/* Description */}
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
                 {member.description}
               </p>
             </div>

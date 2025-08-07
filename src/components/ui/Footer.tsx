@@ -139,7 +139,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
             <p className="text-white text-sm">
-              © 2024 Balosh. All rights reserved.
+              © {new Date().getFullYear()} Balosh. All rights reserved.
             </p>
           </div>
         </div>

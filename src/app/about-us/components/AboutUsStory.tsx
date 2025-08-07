@@ -15,8 +15,8 @@ export default function AboutUsStory() {
         }
       },
       {
-        threshold: 0.25,
-        rootMargin: "0px 0px -100px 0px",
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
       }
     );
     const ref = sectionRef.current;
@@ -34,7 +34,7 @@ export default function AboutUsStory() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-white py-20 overflow-hidden"
+      className="relative bg-white py-12 md:py-20 overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0">
@@ -43,9 +43,9 @@ export default function AboutUsStory() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Column - Text Content */}
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
             {/* Badge */}
             <div
               className={`transition-all duration-1000 ease-out ${
@@ -71,7 +71,7 @@ export default function AboutUsStory() {
 
             {/* Main Heading */}
             <h2
-              className={`text-4xl md:text-5xl font-bold text-gray-900 transition-all duration-1000 ease-out delay-200 ${
+              className={`text-2xl md:text-5xl font-bold text-gray-900 transition-all duration-1000 ease-out delay-200 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 -translate-y-8"
@@ -81,9 +81,9 @@ export default function AboutUsStory() {
             </h2>
 
             {/* Body Paragraphs */}
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               <p
-                className={`text-lg text-gray-600 leading-relaxed transition-all duration-1000 ease-out delay-400 ${
+                className={`text-base md:text-lg text-gray-600 leading-relaxed transition-all duration-1000 ease-out delay-400 ${
                   isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 -translate-y-8"
@@ -96,7 +96,7 @@ export default function AboutUsStory() {
               </p>
 
               <p
-                className={`text-lg text-gray-600 leading-relaxed transition-all duration-1000 ease-out delay-600 ${
+                className={`text-base md:text-lg text-gray-600 leading-relaxed transition-all duration-1000 ease-out delay-600 ${
                   isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 -translate-y-8"
@@ -121,7 +121,7 @@ export default function AboutUsStory() {
           >
             <div className="relative">
               {/* Image Container */}
-              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <div className="hidden md:block relative rounded-2xl overflow-hidden shadow-xl">
                 <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-green-50 relative">
                   {/* Placeholder for building interior image */}
                   <div className="absolute inset-0 flex items-center justify-center">

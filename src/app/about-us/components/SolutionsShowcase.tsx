@@ -15,7 +15,7 @@ export default function SolutionsShowcase() {
         }
       },
       {
-        threshold: 0.25,
+        threshold: 0.15,
         rootMargin: "0px 0px -100px 0px",
       }
     );
@@ -60,11 +60,11 @@ export default function SolutionsShowcase() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-white py-20 overflow-hidden"
+      className="relative bg-white py-12 md:py-20 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Solutions Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           {solutions.map((solution, index) => (
             <div
               key={index}
@@ -77,17 +77,17 @@ export default function SolutionsShowcase() {
               }`}
             >
               {/* Badge */}
-              <div className="mb-6">
+              <div className="mb-4 md:mb-6">
                 <Badge icon={solution.badgeIcon} text={solution.badgeText} />
               </div>
 
               {/* Heading */}
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h3 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
                 {solution.title}
               </h3>
 
               {/* Description */}
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
                 {solution.description}
               </p>
             </div>

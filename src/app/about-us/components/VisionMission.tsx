@@ -15,7 +15,7 @@ export default function VisionMission() {
         }
       },
       {
-        threshold: 0.25,
+        threshold: 0.15,
         rootMargin: "0px 0px -100px 0px",
       }
     );
@@ -34,7 +34,7 @@ export default function VisionMission() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#212529] py-10 overflow-hidden"
+      className="relative bg-[#212529] py-8 md:py-10 overflow-hidden"
     >
       {/* Background decorative circles */}
       <div className="absolute inset-0 pointer-events-none">
@@ -44,7 +44,7 @@ export default function VisionMission() {
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Top Header Section */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           {/* Badge */}
           <div
             className={`transition-all duration-1000 ease-out ${
@@ -66,7 +66,7 @@ export default function VisionMission() {
 
           {/* Main Title */}
           <h2
-            className={`text-4xl md:text-5xl font-bold text-white mt-6 mb-4 transition-all duration-1000 ease-out delay-200 ${
+            className={`text-2xl md:text-5xl font-bold text-white mt-6 mb-4 transition-all duration-1000 ease-out delay-200 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-8"
@@ -84,12 +84,12 @@ export default function VisionMission() {
         </div>
 
         {/* Main Content Area - Two Columns */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Column - Text Boxes */}
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
             {/* Vision Card */}
             <div
-              className={`bg-[#1F2937]/70 rounded-2xl p-8 border-1 border-[#374151] transition-all duration-1000 ease-out delay-600 ${
+              className={`bg-[#1F2937]/70 rounded-2xl p-6 md:p-8 border-1 border-[#374151] transition-all duration-1000 ease-out delay-600 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
@@ -106,10 +106,10 @@ export default function VisionMission() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-3">
+                  <h3 className="text-lg md:text-xl font-bold text-white mb-3">
                     Our Vision
                   </h3>
-                  <p className="text-[#9CA3AF] leading-relaxed">
+                  <p className="text-sm md:text-base text-[#9CA3AF] leading-relaxed">
                     To be the premier provider of integrated security solutions
                     across Africa, creating secure environments that empower
                     businesses and communities while ensuring a brighter, safer
@@ -121,7 +121,7 @@ export default function VisionMission() {
 
             {/* Mission Card */}
             <div
-              className={`bg-[#1F2937]/70 rounded-2xl p-8 border-1 border-[#374151] transition-all duration-1000 ease-out delay-800 ${
+              className={`bg-[#1F2937]/70 rounded-2xl p-6 md:p-8 border-1 border-[#374151] transition-all duration-1000 ease-out delay-800 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
@@ -138,10 +138,10 @@ export default function VisionMission() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-3">
+                  <h3 className="text-lg md:text-xl font-bold text-white mb-3">
                     Our Mission
                   </h3>
-                  <p className="text-[#9CA3AF] leading-relaxed">
+                  <p className="text-sm md:text-base text-[#9CA3AF] leading-relaxed">
                     To deliver world-class access control solutions through
                     innovation, integrity, and customer-centricity, while
                     maintaining our position as Nigeria&apos;s most trusted
@@ -154,7 +154,7 @@ export default function VisionMission() {
 
           {/* Right Column - Abstract Graphic */}
           <div
-            className={`transition-all duration-1000 ease-out delay-1000 ${
+            className={`hidden md:block transition-all duration-1000 ease-out delay-1000 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"

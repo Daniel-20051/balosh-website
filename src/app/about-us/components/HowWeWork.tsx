@@ -15,8 +15,8 @@ export default function HowWeWork() {
         }
       },
       {
-        threshold: 0.25,
-        rootMargin: "0px 0px -100px 0px",
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px",
       }
     );
 
@@ -86,7 +86,7 @@ export default function HowWeWork() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-white py-20 overflow-hidden"
+      className="relative bg-white py-12 md:py-20 overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0">
@@ -96,7 +96,7 @@ export default function HowWeWork() {
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <div
             className={`transition-all duration-1000 ease-out ${
               isVisible
@@ -120,7 +120,7 @@ export default function HowWeWork() {
           </div>
 
           <h2
-            className={`text-4xl md:text-5xl font-bold text-gray-900 mt-6 mb-4 transition-all duration-1000 ease-out delay-200 ${
+            className={`text-2xl md:text-5xl font-bold text-gray-900 mt-6 mb-4 transition-all duration-1000 ease-out delay-200 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-8"
@@ -130,7 +130,7 @@ export default function HowWeWork() {
           </h2>
 
           <p
-            className={`text-xl text-gray-600 max-w-3xl mx-auto transition-all duration-1000 ease-out delay-400 ${
+            className={`text-base md:text-xl text-gray-600 max-w-3xl mx-auto transition-all duration-1000 ease-out delay-400 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-8"
@@ -142,7 +142,7 @@ export default function HowWeWork() {
         </div>
 
         {/* Main Content Block - Image and Principles */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-20">
           {/* Left Side - Image */}
           <div
             className={`transition-all duration-1000 ease-out delay-600 ${
@@ -197,7 +197,7 @@ export default function HowWeWork() {
           </div>
 
           {/* Right Side - Principles */}
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
             {/* Vision & Excellence */}
             <div
               className={`transition-all duration-1000 ease-out delay-800 ${
@@ -217,10 +217,10 @@ export default function HowWeWork() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
                     Vision & Excellence
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                     We operate with a clear vision and strong commitment to
                     performance. Our pursuit of excellence drives every aspect
                     of our work, delivering high-quality products and services
@@ -249,10 +249,10 @@ export default function HowWeWork() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
                     Health & Safety
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                     Safety is fundamental to our operations. We cultivate
                     rigorous attention to detail and meticulous planning,
                     integrating these values into every project for guaranteed
@@ -265,7 +265,7 @@ export default function HowWeWork() {
         </div>
 
         {/* Process Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-16 md:mb-20">
           {processSteps.map((step, index) => (
             <div
               key={index}
@@ -277,16 +277,16 @@ export default function HowWeWork() {
                   : "opacity-0 translate-y-8"
               }`}
             >
-              <div className="bg-[linear-gradient(to_right,_#FFFFFF_0%,_#F9FAFB_100%)] border-1 border-[#E5E7EB] rounded-2xl py-10 px-8 h-full  hover:shadow-xl transition-shadow duration-300">
+              <div className="bg-[linear-gradient(to_right,_#FFFFFF_0%,_#F9FAFB_100%)] border-1 border-[#E5E7EB] rounded-2xl py-8 md:py-10 px-6 md:px-8 h-full  hover:shadow-xl transition-shadow duration-300">
                 <div
                   className={`w-12 h-12 ${step.color} rounded-lg flex items-center justify-center mb-4`}
                 >
                   <div className="text-white">{step.icon}</div>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2">
                   {step.number}. {step.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -295,9 +295,9 @@ export default function HowWeWork() {
         </div>
 
         {/* Commitment & Partnership Section */}
-        <div className="text-center bg-[linear-gradient(to_right,_#FFFFFF_0%,_#F9FAFB_100%)]  border-1 border-[#E5E7EB] rounded-2xl py-10 px-8   hover:shadow-xl transition-shadow duration-300">
+        <div className="text-center bg-[linear-gradient(to_right,_#FFFFFF_0%,_#F9FAFB_100%)]  border-1 border-[#E5E7EB] rounded-2xl py-8 md:py-10 px-6 md:px-8   hover:shadow-xl transition-shadow duration-300">
           <h3
-            className={`text-3xl md:text-4xl font-bold text-gray-900 mb-6 transition-all duration-1000 ease-out delay-1200 ${
+            className={`text-2xl md:text-4xl font-bold text-gray-900 mb-6 transition-all duration-1000 ease-out delay-1200 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-8"
@@ -307,7 +307,7 @@ export default function HowWeWork() {
           </h3>
 
           <p
-            className={`text-lg text-gray-600 max-w-4xl mx-auto mb-8 leading-relaxed transition-all duration-1000 ease-out delay-1400 ${
+            className={`text-sm md:text-lg text-gray-600 max-w-4xl mx-auto mb-8 leading-relaxed transition-all duration-1000 ease-out delay-1400 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-8"

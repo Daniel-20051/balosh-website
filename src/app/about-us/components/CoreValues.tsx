@@ -15,7 +15,7 @@ export default function CoreValues() {
         }
       },
       {
-        threshold: 0.25,
+        threshold: 0.15,
         rootMargin: "0px 0px -100px 0px",
       }
     );
@@ -104,14 +104,14 @@ export default function CoreValues() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-gray-50 py-20 overflow-hidden"
+      className="relative bg-gray-50 py-12 md:py-20 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Header Section */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           {/* Main Title */}
           <h2
-            className={`text-4xl md:text-5xl font-bold text-gray-900 mb-4 transition-all duration-1000 ease-out ${
+            className={`text-2xl md:text-5xl font-bold text-gray-900 mb-4 transition-all duration-1000 ease-out ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-8"
@@ -122,7 +122,7 @@ export default function CoreValues() {
 
           {/* Subtitle */}
           <p
-            className={`text-lg text-gray-600 max-w-2xl mx-auto transition-all duration-1000 ease-out delay-200 ${
+            className={`text-base md:text-lg text-gray-600 max-w-2xl mx-auto transition-all duration-1000 ease-out delay-200 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-8"
@@ -134,11 +134,11 @@ export default function CoreValues() {
         </div>
 
         {/* Values Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
           {values.map((value, index) => (
             <div
               key={index}
-              className={`bg-[linear-gradient(to_right,_#FFFFFF_0%,_#F9FAFB_100%)] border-1 border-[#E5E7EB]  p-8 rounded-2xl hover:shadow-xl transition-all duration-300  ${
+              className={`bg-[linear-gradient(to_right,_#FFFFFF_0%,_#F9FAFB_100%)] border-1 border-[#E5E7EB]  p-6 md:p-8 rounded-2xl hover:shadow-xl transition-all duration-300  ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
@@ -152,12 +152,12 @@ export default function CoreValues() {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4">
                 {value.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                 {value.description}
               </p>
             </div>
