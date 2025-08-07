@@ -15,8 +15,9 @@ const TrustedBy = () => {
         <Image
           src="/assets/lagos-free-zone.png"
           alt="Lagos Free Zone"
-          width={200}
-          height={200}
+          width={120}
+          height={120}
+          className="w-30 h-30 md:w-50 md:h-50"
         />
       ),
     },
@@ -26,8 +27,9 @@ const TrustedBy = () => {
         <Image
           src="/assets/atlantic-hall.png"
           alt="Atlantic Hall"
-          width={200}
-          height={200}
+          width={120}
+          height={120}
+          className="w-30 h-30 md:w-50 md:h-50"
         />
       ),
     },
@@ -37,8 +39,9 @@ const TrustedBy = () => {
         <Image
           src="/assets/chicken-republic.png"
           alt="Chicken Republic"
-          width={200}
-          height={200}
+          width={120}
+          height={120}
+          className="w-30 h-30 md:w-50 md:h-50"
         />
       ),
     },
@@ -48,27 +51,46 @@ const TrustedBy = () => {
         <Image
           src="/assets/love-world.png"
           alt="Love World"
-          width={200}
-          height={200}
+          width={120}
+          height={120}
+          className="w-30 h-30 md:w-50 md:h-50"
         />
       ),
     },
     {
       name: "EKEDC",
       logo: (
-        <Image src="/assets/ekedc.png" alt="EKEDC" width={200} height={200} />
+        <Image
+          src="/assets/ekedc.png"
+          alt="EKEDC"
+          width={120}
+          height={120}
+          className="w-30 h-30 md:w-50 md:h-50"
+        />
       ),
     },
     {
       name: "faan",
       logo: (
-        <Image src="/assets/faan.png" alt="FAAN" width={200} height={200} />
+        <Image
+          src="/assets/faan.png"
+          alt="FAAN"
+          width={120}
+          height={120}
+          className="w-30 h-30 md:w-50 md:h-50"
+        />
       ),
     },
     {
       name: "FCMB",
       logo: (
-        <Image src="/assets/fcmb.png" alt="FCMB" width={200} height={200} />
+        <Image
+          src="/assets/fcmb.png"
+          alt="FCMB"
+          width={120}
+          height={120}
+          className="w-30 h-30 md:w-50 md:h-50"
+        />
       ),
     },
     {
@@ -77,15 +99,22 @@ const TrustedBy = () => {
         <Image
           src="/assets/ikoyi.png"
           alt="IKOYI CLUB"
-          width={200}
-          height={200}
+          width={120}
+          height={120}
+          className="w-20 h-20 md:w-50 md:h-50"
         />
       ),
     },
     {
       name: "LASUTH",
       logo: (
-        <Image src="/assets/lasuth.png" alt="LASUTH" width={200} height={200} />
+        <Image
+          src="/assets/lasuth.png"
+          alt="LASUTH"
+          width={120}
+          height={120}
+          className="w-30 h-30 md:w-50 md:h-50"
+        />
       ),
     },
     {
@@ -94,8 +123,9 @@ const TrustedBy = () => {
         <Image
           src="/assets/polo-club.png"
           alt="POLO CLUB"
-          width={200}
-          height={200}
+          width={120}
+          height={120}
+          className="w-20 h-20 md:w-50 md:h-50"
         />
       ),
     },
@@ -108,8 +138,9 @@ const TrustedBy = () => {
         <Image
           src="/assets/living-faith.png"
           alt="LIVING FAITH CHURCH"
-          width={200}
-          height={200}
+          width={120}
+          height={120}
+          className="w-20 h-20 md:w-50 md:h-50"
         />
       ),
     },
@@ -119,8 +150,9 @@ const TrustedBy = () => {
         <Image
           src="/assets/marriott.png"
           alt="Marriott"
-          width={200}
-          height={200}
+          width={120}
+          height={120}
+          className="w-30 h-30 md:w-50 md:h-50"
         />
       ),
     },
@@ -130,8 +162,9 @@ const TrustedBy = () => {
         <Image
           src="/assets/nigerian-breweries.png"
           alt="Nigerian Breweries"
-          width={200}
-          height={200}
+          width={120}
+          height={120}
+          className="w-20 h-20 md:w-50 md:h-50"
         />
       ),
     },
@@ -141,8 +174,9 @@ const TrustedBy = () => {
         <Image
           src="/assets/providus.png"
           alt="Providus Bank"
-          width={200}
-          height={200}
+          width={120}
+          height={120}
+          className="w-20 h-20 md:w-50 md:h-50"
         />
       ),
     },
@@ -152,15 +186,22 @@ const TrustedBy = () => {
         <Image
           src="/assets/oniru-royal.png"
           alt="Oniru Royal"
-          width={200}
-          height={200}
+          width={120}
+          height={120}
+          className="w-20 h-20 md:w-50 md:h-50"
         />
       ),
     },
     {
       name: "RCCG",
       logo: (
-        <Image src="/assets/rccg.png" alt="RCCG" width={200} height={200} />
+        <Image
+          src="/assets/rccg.png"
+          alt="RCCG"
+          width={120}
+          height={120}
+          className="w-30 h-30 md:w-50 md:h-50"
+        />
       ),
     },
     {
@@ -169,8 +210,9 @@ const TrustedBy = () => {
         <Image
           src="/assets/schlumberger.png"
           alt="Schlumberger"
-          width={200}
-          height={200}
+          width={120}
+          height={120}
+          className="w-20 h-20 md:w-50 md:h-50"
         />
       ),
     },
@@ -180,15 +222,22 @@ const TrustedBy = () => {
         <Image
           src="/assets/vgcpora.png"
           alt="VGCPORA"
-          width={200}
-          height={200}
+          width={120}
+          height={120}
+          className="w-20 h-20 md:w-50 md:h-50"
         />
       ),
     },
     {
       name: "WINGS",
       logo: (
-        <Image src="/assets/wings.png" alt="WINGS" width={200} height={200} />
+        <Image
+          src="/assets/wings.png"
+          alt="WINGS"
+          width={120}
+          height={120}
+          className="w-30 h-30 md:w-50 md:h-50"
+        />
       ),
     },
     {
@@ -197,8 +246,9 @@ const TrustedBy = () => {
         <Image
           src="/assets/present-house.png"
           alt="Present House"
-          width={200}
-          height={200}
+          width={120}
+          height={120}
+          className="w-30 h-30 md:w-50 md:h-50"
         />
       ),
     },
@@ -212,12 +262,12 @@ const TrustedBy = () => {
     <section className="py-10 overflow-hidden">
       <div className="mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4">
           Trusted by Leading <span className="text-orange-500">Companies</span>
         </h2>
 
         {/* Descriptive Text */}
-        <p className="text-lg text-gray-600 mb-12 max-w-5xl mx-auto">
+        <p className="text-sm md:text-lg text-gray-600 mb-12 max-w-5xl mx-auto">
           Join hundreds of organizations worldwide who trust Balosh for their
           technology solutions.
         </p>
@@ -238,7 +288,7 @@ const TrustedBy = () => {
             {seamlessCompanies1.map((company, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 flex items-center justify-center w-48 h-24"
+                className="flex-shrink-0 flex items-center justify-center w-24 h-16 md:w-48 md:h-24"
               >
                 {company.logo}
               </div>
@@ -262,7 +312,7 @@ const TrustedBy = () => {
             {seamlessCompanies2.map((company, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 flex items-center justify-center w-48 h-24"
+                className="flex-shrink-0 flex items-center justify-center w-24 h-16 md:w-48 md:h-24"
               >
                 {company.logo}
               </div>

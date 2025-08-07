@@ -26,7 +26,7 @@ export default function MarketsSection({ markets }: MarketsSectionProps) {
         }
       },
       {
-        threshold: 0.25,
+        threshold: 0.15,
         rootMargin: "0px 0px -100px 0px",
       }
     );
@@ -45,7 +45,7 @@ export default function MarketsSection({ markets }: MarketsSectionProps) {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-gray-50 py-20 overflow-hidden"
+      className="relative bg-gray-50 py-10 md:py-20 overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0">
@@ -74,7 +74,7 @@ export default function MarketsSection({ markets }: MarketsSectionProps) {
         </div>
 
         {/* Markets Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-12 md:mt-16">
           {markets.map((market, index) => (
             <div
               key={index}

@@ -100,7 +100,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="relative bg-white py-20">
+    <section className="relative bg-white py-10 md:py-20">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-20 w-72 h-72 bg-orange-100/30 rounded-full blur-3xl"></div>
@@ -109,11 +109,11 @@ export default function TestimonialsSection() {
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
             What Our Clients Say
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             Real feedback from satisfied clients across different industries
           </p>
         </div>
@@ -124,12 +124,12 @@ export default function TestimonialsSection() {
           <div className="relative">
             <div
               key={testimonials[currentIndex].id}
-              className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 relative"
+              className="bg-white rounded-3xl p-6 md:p-12 shadow-xl border border-gray-100 relative"
             >
               {/* Quote Icon */}
-              <div className="absolute top-8 left-8 text-orange-200">
+              <div className="absolute top-6 md:top-8 left-6 md:left-8 text-orange-200">
                 <svg
-                  className="w-12 h-12"
+                  className="w-8 h-8 md:w-12 md:h-12"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -140,14 +140,14 @@ export default function TestimonialsSection() {
               {/* Testimonial Content */}
               <div className="relative z-10">
                 {/* Rating */}
-                <div className="flex justify-center mb-6">
+                <div className="flex justify-center mb-4 md:mb-6">
                   {renderStars(testimonials[currentIndex].rating)}
                 </div>
 
                 {/* Quote */}
                 <blockquote
                   key={`quote-${currentIndex}`}
-                  className="text-xl md:text-2xl text-gray-700 text-center mb-8 leading-relaxed italic animate-slideIn"
+                  className="text-lg md:text-2xl text-gray-700 text-center mb-6 md:mb-8 leading-relaxed italic animate-slideIn"
                 >
                   &quot;{testimonials[currentIndex].quote}&quot;
                 </blockquote>
@@ -157,10 +157,10 @@ export default function TestimonialsSection() {
                   key={`author-${currentIndex}`}
                   className="text-center animate-slideIn"
                 >
-                  <div className="font-bold text-gray-900 text-lg">
+                  <div className="font-bold text-gray-900 text-base md:text-lg">
                     {testimonials[currentIndex].name}
                   </div>
-                  <div className="text-gray-600">
+                  <div className="text-sm md:text-base text-gray-600">
                     {testimonials[currentIndex].title},{" "}
                     {testimonials[currentIndex].company}
                   </div>
@@ -171,11 +171,11 @@ export default function TestimonialsSection() {
             {/* Navigation Arrows */}
             <button
               onClick={prevSlide}
-              className="absolute cursor-pointer left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200"
+              className="absolute cursor-pointer -left-4 md:-left-6 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 md:p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200 z-20"
               aria-label="Previous testimonial"
             >
               <svg
-                className="w-6 h-6 text-gray-600"
+                className="w-5 h-5 md:w-6 md:h-6 text-gray-600"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -191,11 +191,11 @@ export default function TestimonialsSection() {
 
             <button
               onClick={nextSlide}
-              className="absolute cursor-pointer right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200"
+              className="absolute cursor-pointer -right-4 md:-right-6 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 md:p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200 z-20"
               aria-label="Next testimonial"
             >
               <svg
-                className="w-6 h-6 text-gray-600"
+                className="w-5 h-5 md:w-6 md:h-6 text-gray-600"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -211,7 +211,7 @@ export default function TestimonialsSection() {
           </div>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center mt-8 space-x-2">
+          <div className="flex justify-center mt-6 md:mt-8 space-x-2">
             {testimonials.map((_, index) => (
               <button
                 key={index}

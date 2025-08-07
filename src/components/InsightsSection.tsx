@@ -48,7 +48,7 @@ export default function InsightsSection() {
   ];
 
   return (
-    <section className="relative bg-gray-50 py-20 overflow-hidden">
+    <section className="relative bg-gray-50 py-6 md:py-20 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-20 w-72 h-72 bg-orange-100/30 rounded-full blur-3xl"></div>
@@ -57,18 +57,18 @@ export default function InsightsSection() {
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-xl md:text-5xl font-bold text-gray-900 mb-3 md:mb-6">
             Latest Insights
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm md:text-lg text-gray-600 max-w-2xl mx-auto">
             Stay updated with the latest trends and innovations in technology
             and industry solutions
           </p>
         </div>
 
         {/* Insights Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {insights.map((insight) => (
             <InsightCard
               key={insight.id}
@@ -83,14 +83,14 @@ export default function InsightsSection() {
         </div>
 
         {/* View All Button */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-6 md:mt-12">
           <a
             href="/blog"
-            className="inline-flex items-center bg-primary text-white px-8 py-3 rounded-full hover:bg-orange-600 transition-colors duration-200 font-medium text-lg group"
+            className="inline-flex items-center bg-primary text-white px-5 md:px-8 py-2 md:py-3 rounded-full hover:bg-orange-600 transition-colors duration-200 font-medium text-sm md:text-lg group"
           >
             View All Insights
             <svg
-              className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200"
+              className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200"
               fill="currentColor"
               viewBox="0 0 20 20"
             >

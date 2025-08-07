@@ -12,7 +12,7 @@ export default function SolutionCard({
   iconBgColor,
 }: SolutionCardProps) {
   return (
-    <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-orange-200 overflow-hidden h-full flex flex-col">
+    <div className="group relative bg-white rounded-3xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-orange-200 overflow-hidden h-full flex flex-col">
       {/* Background gradient overlay on hover */}
       <div className="absolute inset-0 bg-gradient-to-br from-orange-50/0 to-orange-100/0 group-hover:from-orange-50/30 group-hover:to-orange-100/20 transition-all duration-500 rounded-3xl"></div>
 
@@ -36,12 +36,12 @@ export default function SolutionCard({
         </div>
 
         {/* Title with enhanced typography */}
-        <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-gray-800 transition-colors duration-300">
+        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 group-hover:text-gray-800 transition-colors duration-300">
           {title}
         </h3>
 
         {/* Description with improved readability */}
-        <p className="text-gray-600 mb-8 leading-relaxed text-base group-hover:text-gray-700 transition-colors duration-300">
+        <p className="text-sm md:text-base text-gray-600 mb-6 md:mb-8 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
           {description}
         </p>
       </div>

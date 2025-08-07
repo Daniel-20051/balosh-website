@@ -35,7 +35,7 @@ export default function AboutSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative  mx-auto bg-gray-50 py-20 overflow-hidden"
+      className="relative mx-auto bg-gray-50 py-10 md:py-20 overflow-hidden"
     >
       {/* Blur inset background */}
       <div className="absolute inset-0">
@@ -61,7 +61,7 @@ export default function AboutSection() {
         </div>
 
         {/* Main Heading */}
-        <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4 ">
+        <h2 className="text-xl md:text-5xl font-bold text-gray-900 mb-4 ">
           Welcome to Balosh Integrated Services
         </h2>
 
@@ -69,7 +69,7 @@ export default function AboutSection() {
         <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
 
         {/* First Paragraph */}
-        <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+        <p className="text-base md:text-lg text-gray-700 mb-6 md:mb-8 leading-relaxed">
           Balosh Integrated Services is the leading access control company in
           Nigeria, proudly serving clients since 2005. With a strong emphasis on
           the commercial sector, we have established ourselves as the most
@@ -80,7 +80,7 @@ export default function AboutSection() {
         </p>
 
         {/* Second Paragraph */}
-        <p className="text-lg text-gray-700 leading-relaxed">
+        <p className="text-base md:text-lg text-gray-700 leading-relaxed">
           At Balosh, we believe that integrity and customer satisfaction are
           paramount. Our core values—
           <span className="text-primary font-semibold">
