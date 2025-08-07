@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 interface CarouselSlide {
   id: number;
@@ -53,7 +53,7 @@ const carouselSlides: CarouselSlide[] = [
     description:
       "Building the future with intelligent systems that adapt to your needs",
     image:
-      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     ctaText: "Get Started",
     ctaLink: "/contact",
   },
@@ -62,17 +62,32 @@ const carouselSlides: CarouselSlide[] = [
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  const startInterval = () => {
+    // Clear any existing interval
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+
+    // Start new interval
+    intervalRef.current = setInterval(() => {
       setIsAnimating(true);
       setTimeout(() => {
         setCurrentSlide((prev) => (prev + 1) % carouselSlides.length);
         setIsAnimating(false);
       }, 300);
     }, 5000);
+  };
 
-    return () => clearInterval(interval);
+  useEffect(() => {
+    startInterval();
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
   }, []);
 
   const goToSlide = (index: number) => {
@@ -82,6 +97,8 @@ export default function HeroSection() {
       setCurrentSlide(index);
       setIsAnimating(false);
     }, 300);
+    // Restart interval after manual navigation
+    startInterval();
   };
 
   const nextSlide = () => {
@@ -90,6 +107,8 @@ export default function HeroSection() {
       setCurrentSlide((prev) => (prev + 1) % carouselSlides.length);
       setIsAnimating(false);
     }, 300);
+    // Restart interval after manual navigation
+    startInterval();
   };
 
   const prevSlide = () => {
@@ -100,6 +119,8 @@ export default function HeroSection() {
       );
       setIsAnimating(false);
     }, 300);
+    // Restart interval after manual navigation
+    startInterval();
   };
 
   const currentSlideData = carouselSlides[currentSlide];
