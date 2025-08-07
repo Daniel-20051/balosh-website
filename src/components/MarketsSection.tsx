@@ -8,7 +8,6 @@ interface Market {
   icon: React.ReactNode;
   title: string;
   description: string;
-  href: string;
 }
 
 interface MarketsSectionProps {
@@ -91,7 +90,6 @@ export default function MarketsSection({ markets }: MarketsSectionProps) {
                 icon={market.icon}
                 title={market.title}
                 description={market.description}
-                href={market.href}
               />
             </div>
           ))}

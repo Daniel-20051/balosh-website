@@ -8,7 +8,7 @@ const blogPosts = [
     id: 1,
     title: "The Future of AI in Enterprise Solutions",
     excerpt:
-      "Discover how artificial intelligence is revolutionizing enterprise operations and what businesses need to know to stay competitive in the AI-driven future.",
+      "Discover how artificial intelligence is revolutionizing enterprise operations and what businesses need to know to stay competitive.",
     image: "https://picsum.photos/600/300?random=1",
     category: "Technology",
     author: "Sarah Johnson",

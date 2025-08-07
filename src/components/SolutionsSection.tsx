@@ -9,10 +9,7 @@ interface Solution {
   title: string;
   description: string;
   features: string[];
-  href: string;
   iconBgColor: string;
-  linkColor: string;
-  hoverBorderColor: string;
 }
 
 interface SolutionsSectionProps {
@@ -102,10 +99,7 @@ export default function SolutionsSection({ solutions }: SolutionsSectionProps) {
                 title={solution.title}
                 description={solution.description}
                 features={solution.features}
-                href={solution.href}
                 iconBgColor={solution.iconBgColor}
-                linkColor={solution.linkColor}
-                hoverBorderColor={solution.hoverBorderColor}
               />
             </div>
           ))}
