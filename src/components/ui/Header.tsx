@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { JSX } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import MobileMenu from "./MobileMenu";
@@ -8,10 +8,21 @@ import { usePathname } from "next/navigation";
 
 const Header = () => {
   const pathname = usePathname();
+  const [isScrolled, setIsScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 w-full">
+    <header className="fixed top-0 z-50 w-full">
       {/* Top bar with contact info and social media */}
-      <div className="bg-primary text-white py-2 px-4 overflow-hidden">
+      <div className="bg-black text-primary py-2 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           {/* Desktop Layout */}
           <div className="hidden md:flex items-center justify-between text-sm">
@@ -170,7 +181,11 @@ const Header = () => {
       </div>
 
       {/* Main header */}
-      <div className="bg-white px-4 py-4 shadow-sm">
+      <div
+        className={`bg-white/50 px-4 py-4 shadow-sm transition-all duration-300 ${
+          isScrolled ? "backdrop-blur-lg" : ""
+        }`}
+      >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
@@ -242,7 +257,7 @@ const Header = () => {
           <div className="hidden md:block">
             <Link
               href="/request-demo"
-              className="bg-black text-white shadow-md px-6 py-3  rounded-md hover:scale-110 transition-transform duration-200 font-medium"
+              className="bg-primary text-white shadow-md px-6 py-3  rounded-md hover:scale-110 transition-transform duration-200 font-medium"
             >
               Request a Demo
             </Link>

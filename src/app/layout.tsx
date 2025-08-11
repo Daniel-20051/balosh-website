@@ -32,7 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased ${inter.variable} ${caveat.variable}`}>
+      <body
+        className={`antialiased pt-[104px] ${inter.variable} ${caveat.variable}`}
+      >
         <Header />
         {children}
         <NewsLetter />
