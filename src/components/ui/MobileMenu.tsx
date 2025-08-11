@@ -45,7 +45,7 @@ const MobileMenu = () => {
 
       {/* Mobile Navigation Side Panel */}
       <div
-        className={`fixed top-0 right-0 h-full w-80 bg-background shadow-xl z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 right-0 h-full w-60 bg-background shadow-xl z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

@@ -182,8 +182,10 @@ const Header = () => {
 
       {/* Main header */}
       <div
-        className={`bg-white/50 px-4 py-4 shadow-md transition-all duration-300 ${
-          isScrolled ? "backdrop-blur-lg" : ""
+        className={`px-4 py-4 shadow-md transition-all duration-300 bg-white ${
+          isScrolled
+            ? "md:bg-opacity-50 md:backdrop-blur-lg"
+            : "md:bg-opacity-50"
         }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">

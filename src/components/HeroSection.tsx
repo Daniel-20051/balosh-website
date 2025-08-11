@@ -129,7 +129,7 @@ export default function HeroSection() {
     <section className="relative h-80 md:h-screen overflow-hidden bg-gray-900">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-700 ease-in-out"
+        className="absolute inset-0 bg-cover bg-center bg-fixed bg-no-repeat transition-all duration-700 ease-in-out"
         style={{ backgroundImage: `url(${currentSlideData.image})` }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
