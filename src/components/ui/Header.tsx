@@ -44,6 +44,8 @@ const Header = () => {
             <div className="flex items-center space-x-4">
               {/* Instagram */}
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.instagram.com/baloshng/"
                 className="hover:opacity-80 transition-opacity duration-200"
                 aria-label="Instagram"
@@ -59,6 +61,8 @@ const Header = () => {
 
               {/* X */}
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://x.com/baloshng"
                 className="hover:opacity-80 transition-opacity duration-200"
                 aria-label="X"
@@ -74,6 +78,8 @@ const Header = () => {
 
               {/* LinkedIn */}
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.linkedin.com/company/balosh-integrated-services/"
                 className="hover:opacity-80 transition-opacity duration-200"
                 aria-label="LinkedIn"
@@ -89,6 +95,8 @@ const Header = () => {
 
               {/* Facebook */}
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.facebook.com/balosh1/"
                 className="hover:opacity-80 transition-opacity duration-200"
                 aria-label="Facebook"
@@ -121,6 +129,8 @@ const Header = () => {
               </a>
               {/* Instagram */}
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.instagram.com/baloshng/"
                 className="hover:opacity-80 transition-opacity duration-200"
                 aria-label="Instagram"
@@ -135,6 +145,8 @@ const Header = () => {
               </a>
               {/* X */}
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://x.com/baloshng"
                 className="hover:opacity-80 transition-opacity duration-200"
                 aria-label="X"
@@ -149,6 +161,8 @@ const Header = () => {
               </a>
               {/* LinkedIn */}
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.linkedin.com/company/balosh-integrated-services/"
                 className="hover:opacity-80 transition-opacity duration-200"
                 aria-label="LinkedIn"
@@ -163,6 +177,8 @@ const Header = () => {
               </a>
               {/* Facebook */}
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.facebook.com/balosh1/"
                 className="hover:opacity-80 transition-opacity duration-200"
                 aria-label="Facebook"

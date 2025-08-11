@@ -88,6 +88,8 @@ const Footer = () => {
               <div className="flex space-x-4">
                 <a
                   href="https://www.linkedin.com/company/balosh-integrated-services/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-gray-800 hover:bg-gray-700 transition-colors duration-200 p-2 rounded"
                   aria-label="LinkedIn"
                 >
@@ -101,6 +103,8 @@ const Footer = () => {
                 </a>
                 <a
                   href="https://x.com/baloshng"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-gray-800 hover:bg-gray-700 transition-colors duration-200 p-2 rounded-full"
                   aria-label="X (Twitter)"
                 >
@@ -114,6 +118,8 @@ const Footer = () => {
                 </a>
                 <a
                   href="https://www.facebook.com/balosh1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-gray-800 hover:bg-gray-700 transition-colors duration-200 p-2 rounded-full"
                   aria-label="Facebook"
                 >
@@ -127,6 +133,8 @@ const Footer = () => {
                 </a>
                 <a
                   href="https://www.instagram.com/baloshng/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-gray-800 hover:bg-gray-700 transition-colors duration-200 p-2 rounded-full"
                   aria-label="Instagram"
                 >
