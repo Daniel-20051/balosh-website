@@ -223,7 +223,7 @@ const Header = () => {
               href="/"
               className={`font-medium px-2 py-1 transition-colors duration-200 ${
                 pathname === "/"
-                  ? "underline text-primary"
+                  ? " text-primary"
                   : "text-gray-900 hover:text-primary"
               }`}
             >
@@ -233,7 +233,7 @@ const Header = () => {
               href="/about-us"
               className={`font-medium px-2 py-1 transition-colors duration-200 ${
                 pathname === "/about-us"
-                  ? "underline text-primary"
+                  ? " text-primary"
                   : "text-gray-900 hover:text-primary"
               }`}
             >
@@ -243,7 +243,7 @@ const Header = () => {
               href="/solutions"
               className={`font-medium px-2 py-1 transition-colors duration-200 ${
                 pathname === "/solutions"
-                  ? "underline text-primary"
+                  ? " text-primary"
                   : "text-gray-900 hover:text-primary"
               }`}
             >
@@ -253,7 +253,7 @@ const Header = () => {
               href="/blog"
               className={`font-medium px-2 py-1 transition-colors duration-200 ${
                 pathname === "/blog"
-                  ? "underline text-primary"
+                  ? " text-primary"
                   : "text-gray-900 hover:text-primary"
               }`}
             >
@@ -263,7 +263,7 @@ const Header = () => {
               href="/careers"
               className={`font-medium px-2 py-1 transition-colors duration-200 ${
                 pathname === "/careers"
-                  ? "underline text-primary"
+                  ? " text-primary"
                   : "text-gray-900 hover:text-primary"
               }`}
             >
