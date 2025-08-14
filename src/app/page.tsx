@@ -9,6 +9,9 @@ import InsightsSection from "@/components/InsightsSection";
 import TrustedBy from "@/components/ui/TrustedBy";
 import { getRecentBlogs } from "@/app/api";
 
+// Disable caching for this page
+export const revalidate = 0; // Always revalidate on every request
+
 export default async function Home() {
   // Fetch recent blogs for insights section
   let recentBlogs = [];

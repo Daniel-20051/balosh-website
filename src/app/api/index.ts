@@ -4,7 +4,12 @@ const BaseUrl = "https://balosh-blog-api.onrender.com/api/v1";
 
 export const getBlogs = async (page: number = 1, limit: number = 3) => {
     try {
-        const response = await axios.get(`${BaseUrl}/blogs`, { params: { page, limit } });
+        const response = await axios.get(`${BaseUrl}/blogs`, { 
+            params: { page, limit },
+            headers: {
+                'Cache-Control': 'no-cache',
+            }
+        });
         return response.data;
        
     } catch (error) {
@@ -26,7 +31,12 @@ export const getBlogsBySlug = async (slug: string) => {
 
 export const getRecentBlogs = async (limit: number = 3) => {
     try {
-        const response = await axios.get(`${BaseUrl}/blogs`, { params: { limit, page: 1 } });
+        const response = await axios.get(`${BaseUrl}/blogs`, { 
+            params: { limit, page: 1 },
+            headers: {
+                'Cache-Control': 'no-cache',
+            }
+        });
         return response.data;
     } catch (error) {
         console.log(error);

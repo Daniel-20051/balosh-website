@@ -215,7 +215,7 @@ export default async function BlogArticlePage({
 
         {/* Featured Image */}
         {featuredImage && (
-          <div className="max-w-5xl mx-auto mb-8 overflow-hidden rounded-lg">
+          <div className="max-w-5xl mx-auto mb-8 overflow-hidden lg:rounded-lg">
             <Image
               src={featuredImage}
               alt={title}

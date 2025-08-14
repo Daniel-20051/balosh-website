@@ -4,6 +4,9 @@ import BlogContent from "./components/BlogContent";
 import BlogSidebar from "./components/BlogSidebar";
 import { getBlogs, getRecentBlogs } from "../api";
 
+// Disable caching for this page
+export const revalidate = 0;
+
 export async function generateMetadata({
   searchParams,
 }: {
