@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 
 interface BlogPost {
-  id: number;
+  id: string;
+  slug?: string;
   title: string;
   excerpt: string;
   image: string;
@@ -19,15 +19,15 @@ interface BlogPostCardProps {
 }
 
 export default function BlogPostCard({ post }: BlogPostCardProps) {
+  const href = post.slug ? `/blog/${post.slug}` : `/blog/${post.id}`;
+
   return (
     <article className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300">
       {/* Featured Image */}
       <div className="relative h-40 md:h-48 lg:h-64 overflow-hidden">
-        <Image
+        <img
           src={post.image}
           alt={post.title}
-          width={400}
-          height={250}
           className="w-full h-40 md:h-48 lg:h-64 object-cover rounded-t-lg"
           loading="lazy"
         />
@@ -57,11 +57,13 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
         </div>
 
         {/* Excerpt */}
-        <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-3 md:mb-4">{post.excerpt}</p>
+        <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-3 md:mb-4">
+          {post.excerpt}
+        </p>
 
         {/* Read More Link */}
         <a
-          href={`/blog/${post.id}`}
+          href={href}
           className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700 transition-colors duration-200 text-sm md:text-base"
         >
           Read More →

@@ -1,7 +1,19 @@
 import InsightCard from "./ui/InsightCard";
+import { getRecentBlogs } from "@/app/api";
+
+interface ApiBlogItem {
+  _id: string;
+  title: string;
+  excerpt?: string;
+  autoExcerpt?: string;
+  featuredImage: string;
+  category?: { name?: string } | null;
+  readTime?: number;
+  slug?: string;
+}
 
 interface Insight {
-  id: number;
+  id: string;
   image: string;
   title: string;
   description: string;
@@ -10,10 +22,31 @@ interface Insight {
   readTime: string;
 }
 
-export default function InsightsSection() {
-  const insights: Insight[] = [
+interface InsightsSectionProps {
+  insights?: ApiBlogItem[];
+}
+
+export default function InsightsSection({
+  insights = [],
+}: InsightsSectionProps) {
+  // Transform API data to insights format
+  const transformedInsights: Insight[] = insights.map((blog) => ({
+    id: blog._id,
+    image:
+      blog.featuredImage ||
+      "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=300&fit=crop",
+    title: blog.title,
+    description:
+      blog.excerpt || blog.autoExcerpt || "Read more about this topic...",
+    href: `/blog/${blog.slug || blog._id}`,
+    category: blog.category?.name || "Technology",
+    readTime: blog.readTime ? `${blog.readTime} min read` : "5 min read",
+  }));
+
+  // Fallback insights if no API data
+  const fallbackInsights: Insight[] = [
     {
-      id: 1,
+      id: "1",
       image:
         "https://images.unsplash.com/photo-1545459720-aac8509eb02c?w=400&h=300&fit=crop",
       title: "Future of Transportation Technology",
@@ -24,7 +57,7 @@ export default function InsightsSection() {
       readTime: "6 min read",
     },
     {
-      id: 2,
+      id: "2",
       image:
         "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=300&fit=crop",
       title: "Airport Digital Innovation",
@@ -35,7 +68,7 @@ export default function InsightsSection() {
       readTime: "8 min read",
     },
     {
-      id: 3,
+      id: "3",
       image:
         "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=300&fit=crop",
       title: "Smart Retail Solutions",
@@ -46,6 +79,9 @@ export default function InsightsSection() {
       readTime: "5 min read",
     },
   ];
+
+  const displayInsights =
+    transformedInsights.length > 0 ? transformedInsights : fallbackInsights;
 
   return (
     <section className="relative bg-gray-50 py-6 md:py-20 overflow-hidden">
@@ -69,7 +105,7 @@ export default function InsightsSection() {
 
         {/* Insights Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {insights.map((insight) => (
+          {displayInsights.map((insight) => (
             <InsightCard
               key={insight.id}
               image={insight.image}

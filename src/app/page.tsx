@@ -7,8 +7,18 @@ import ImpactSection from "@/components/ImpactSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import InsightsSection from "@/components/InsightsSection";
 import TrustedBy from "@/components/ui/TrustedBy";
+import { getRecentBlogs } from "@/app/api";
 
-export default function Home() {
+export default async function Home() {
+  // Fetch recent blogs for insights section
+  let recentBlogs = [];
+  try {
+    const data = await getRecentBlogs(3);
+    recentBlogs = data?.data?.blogs ?? [];
+  } catch (error) {
+    console.error("Error fetching recent blogs:", error);
+    // Component will use fallback data
+  }
   const solutions = [
     {
       icon: (
@@ -167,7 +177,7 @@ export default function Home() {
       <MarketsSection markets={markets} />
       <ImpactSection />
       <TestimonialsSection />
-      <InsightsSection />
+      <InsightsSection insights={recentBlogs} />
     </div>
   );
 }

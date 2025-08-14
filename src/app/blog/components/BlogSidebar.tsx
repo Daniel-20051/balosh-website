@@ -1,36 +1,43 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 
-const categories = [
-  "Technology",
-  "Digital Transformation",
-  "Industry Insights",
-  "Case Studies",
-  "Security",
-  "AI",
-];
+function formatDateUTC(iso?: string): string {
+  if (!iso) return "";
+  const d = new Date(iso);
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const day = d.getUTCDate().toString().padStart(2, "0");
+  const month = months[d.getUTCMonth()];
+  const year = d.getUTCFullYear();
+  return `${month} ${day}, ${year}`;
+}
 
-const recentPosts = [
-  {
-    title: "AI Implementation Guide",
-    date: "March 15, 2024",
-    image: "https://picsum.photos/60/60?random=4",
-  },
-  {
-    title: "Cloud Migration Success",
-    date: "March 12, 2024",
-    image: "https://picsum.photos/60/60?random=5",
-  },
-  {
-    title: "Data Analytics Trends",
-    date: "March 9, 2024",
-    image: "https://picsum.photos/60/60?random=6",
-  },
-];
+interface BlogPost {
+  _id: string;
+  title: string;
+  slug?: string;
+  featuredImage: string;
+  createdAt: string;
+}
 
-const tags = [
+interface BlogSidebarProps {
+  recentPosts?: BlogPost[];
+}
+
+const fallbackTags = [
   "AI",
   "Cloud",
   "Security",
@@ -40,36 +47,19 @@ const tags = [
   "Innovation",
 ];
 
-export default function BlogSidebar() {
+export default function BlogSidebar({ recentPosts = [] }: BlogSidebarProps) {
   return (
     <aside className="space-y-6 md:space-y-8">
       {/* Search Widget */}
       <div className="bg-white p-4 md:p-6 rounded-lg shadow-sm border border-gray-100">
-        <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-3 md:mb-4">Search</h3>
+        <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-3 md:mb-4">
+          Search
+        </h3>
         <input
           type="text"
           placeholder="Search articles..."
           className="w-full px-3 md:px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm md:text-base"
         />
-      </div>
-
-      {/* Categories Widget */}
-      <div className="bg-white p-4 md:p-6 rounded-lg shadow-sm border border-gray-100">
-        <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-3 md:mb-4">Categories</h3>
-        <ul className="space-y-2">
-          {categories.map((category) => (
-            <li key={category}>
-              <a
-                href={`/blog/category/${category
-                  .toLowerCase()
-                  .replace(" ", "-")}`}
-                className="text-sm md:text-base text-gray-600 hover:text-orange-600 transition-colors duration-200"
-              >
-                {category}
-              </a>
-            </li>
-          ))}
-        </ul>
       </div>
 
       {/* Recent Posts Widget */}
@@ -78,32 +68,38 @@ export default function BlogSidebar() {
           Recent Posts
         </h3>
         <div className="space-y-3 md:space-y-4">
-          {recentPosts.map((post, index) => (
-            <div key={index} className="flex gap-3">
-              <Image
-                src={post.image}
-                alt={post.title}
-                width={60}
-                height={60}
-                className="w-12 h-12 md:w-15 md:h-15 rounded object-cover"
-                loading="lazy"
-              />
-              <div className="flex-1 min-w-0">
-                <h4 className="text-xs md:text-sm font-medium text-gray-900 truncate hover:text-orange-600 transition-colors duration-200">
-                  <a href={`/blog/post-${index + 1}`}>{post.title}</a>
-                </h4>
-                <p className="text-xs text-gray-500">{post.date}</p>
+          {recentPosts.length > 0 ? (
+            recentPosts.map((post) => (
+              <div key={post._id} className="flex gap-3">
+                <img
+                  src={post.featuredImage}
+                  alt={post.title}
+                  className="w-12 h-12 md:w-15 md:h-15 rounded object-cover"
+                  loading="lazy"
+                />
+                <div className="flex-1 min-w-0">
+                  <h4 className="text-xs md:text-sm font-medium text-gray-900 truncate hover:text-orange-600 transition-colors duration-200">
+                    <a href={`/blog/${post.slug || post._id}`}>{post.title}</a>
+                  </h4>
+                  <p className="text-xs text-gray-500">
+                    {formatDateUTC(post.createdAt)}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p className="text-sm text-gray-500">No recent posts available</p>
+          )}
         </div>
       </div>
 
       {/* Tags Widget */}
       <div className="bg-white p-4 md:p-6 rounded-lg shadow-sm border border-gray-100">
-        <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-3 md:mb-4">Tags</h3>
+        <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-3 md:mb-4">
+          Tags
+        </h3>
         <div className="flex flex-wrap gap-2">
-          {tags.map((tag) => (
+          {fallbackTags.map((tag) => (
             <a
               key={tag}
               href={`/blog/tag/${tag.toLowerCase()}`}
@@ -117,7 +113,9 @@ export default function BlogSidebar() {
 
       {/* Newsletter Subscription Widget */}
       <div className="bg-gray-800 p-4 md:p-6 rounded-lg text-white">
-        <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3">Stay Updated</h3>
+        <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3">
+          Stay Updated
+        </h3>
         <p className="text-xs md:text-sm text-gray-300 mb-3 md:mb-4">
           Subscribe to our newsletter for the latest insights and updates.
         </p>
