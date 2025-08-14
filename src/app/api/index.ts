@@ -16,7 +16,6 @@ export const getBlogs = async (page: number = 1, limit: number = 3) => {
 export const getBlogsBySlug = async (slug: string) => {
     try {
         const response = await axios.get(`${BaseUrl}/blogs/${slug}`);
-        console.log(response.data);
         return response.data;
     } catch (error) {
         console.log(error);
