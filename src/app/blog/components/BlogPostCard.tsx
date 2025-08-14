@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 interface BlogPost {
   id: string;
@@ -25,9 +26,11 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
     <article className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300">
       {/* Featured Image */}
       <div className="relative h-40 md:h-48 lg:h-64 overflow-hidden">
-        <img
+        <Image
           src={post.image}
           alt={post.title}
+          width={400}
+          height={250}
           className="w-full h-40 md:h-48 lg:h-64 object-cover rounded-t-lg"
           loading="lazy"
         />

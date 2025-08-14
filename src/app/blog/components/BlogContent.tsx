@@ -134,7 +134,7 @@ export default function BlogContent({ posts, pagination }: BlogContentProps) {
 
       <div className="space-y-6 md:space-y-8">
         {filtered.map((post) => (
-          <BlogPostCard key={post.id} post={post as any} />
+          <BlogPostCard key={post.id} post={post} />
         ))}
       </div>
 

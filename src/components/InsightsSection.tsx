@@ -1,5 +1,5 @@
 import InsightCard from "./ui/InsightCard";
-import { getRecentBlogs } from "@/app/api";
+import Link from "next/link";
 
 interface ApiBlogItem {
   _id: string;
@@ -120,7 +120,7 @@ export default function InsightsSection({
 
         {/* View All Button */}
         <div className="text-center mt-6 md:mt-12">
-          <a
+          <Link
             href="/blog"
             className="inline-flex items-center bg-primary text-white px-5 md:px-8 py-2 md:py-3 rounded-full hover:bg-orange-600 transition-colors duration-200 font-medium text-sm md:text-lg group"
           >
@@ -136,7 +136,7 @@ export default function InsightsSection({
                 clipRule="evenodd"
               />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

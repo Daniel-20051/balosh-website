@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getBlogsBySlug } from "@/app/api";
 import CopyLinkButton from "../components/CopyLinkButton";
@@ -34,9 +35,9 @@ export async function generateMetadata({
   try {
     const { slug } = await params;
     const response = await getBlogsBySlug(slug);
-    const payload = (response as any)?.data ?? response;
-    const nested = (payload as any)?.data ?? payload;
-    const post = (nested as any)?.blog ?? nested ?? null;
+    const payload = response?.data ?? response;
+    const nested = payload?.data ?? payload;
+    const post = nested?.blog ?? nested ?? null;
 
     if (!post) {
       return {
@@ -113,9 +114,9 @@ export default async function BlogArticlePage({
 }) {
   const { slug } = await params;
   const response = await getBlogsBySlug(slug);
-  const payload = (response as any)?.data ?? response;
-  const nested = (payload as any)?.data ?? payload;
-  const post = (nested as any)?.blog ?? nested ?? null;
+  const payload = response?.data ?? response;
+  const nested = payload?.data ?? payload;
+  const post = nested?.blog ?? nested ?? null;
 
   if (!post) {
     notFound();
@@ -215,9 +216,11 @@ export default async function BlogArticlePage({
         {/* Featured Image */}
         {featuredImage && (
           <div className="max-w-5xl mx-auto mb-8 overflow-hidden rounded-lg">
-            <img
+            <Image
               src={featuredImage}
               alt={title}
+              width={1200}
+              height={350}
               className="w-full object-cover h-[350px]"
             />
           </div>
@@ -295,9 +298,11 @@ export default async function BlogArticlePage({
           <div className="bg-gray-50 rounded-lg p-6 md:p-8 ">
             <div className="flex items-start max-w-4xl mx-auto gap-4">
               {authorAvatar ? (
-                <img
+                <Image
                   src={authorAvatar}
                   alt={authorName}
+                  width={64}
+                  height={64}
                   className="w-16 h-16 rounded-full object-cover flex-shrink-0"
                 />
               ) : (

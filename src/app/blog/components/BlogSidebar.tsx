@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 function formatDateUTC(iso?: string): string {
   if (!iso) return "";
@@ -71,9 +72,11 @@ export default function BlogSidebar({ recentPosts = [] }: BlogSidebarProps) {
           {recentPosts.length > 0 ? (
             recentPosts.map((post) => (
               <div key={post._id} className="flex gap-3">
-                <img
+                <Image
                   src={post.featuredImage}
                   alt={post.title}
+                  width={60}
+                  height={60}
                   className="w-12 h-12 md:w-15 md:h-15 rounded object-cover"
                   loading="lazy"
                 />
