@@ -141,7 +141,7 @@ export default async function BlogArticlePage({
       <article className="mx-auto pt-8 pb-0">
         {/* Breadcrumbs */}
         <nav
-          className="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4 max-w-4xl mx-auto"
+          className="text-xs sm:text-sm px-4 text-gray-500 mb-3 sm:mb-4 max-w-4xl mx-auto"
           aria-label="Breadcrumb"
         >
           <ol className="flex items-center gap-2">
@@ -164,7 +164,7 @@ export default async function BlogArticlePage({
         </nav>
 
         {/* Meta top row (category + read time) */}
-        <div className="flex items-center gap-3 text-xs sm:text-sm text-gray-600 mb-3 max-w-4xl mx-auto">
+        <div className="flex items-center px-4 gap-3 text-xs sm:text-sm text-gray-600 mb-3 max-w-4xl mx-auto">
           {categoryName && (
             <span className="inline-block px-2 py-1 font-semibold bg-primary/10 border border-primary/20 rounded-full text-primary">
               {categoryName}
@@ -174,21 +174,21 @@ export default async function BlogArticlePage({
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl md:text-5xl max-w-4xl mx-auto font-bold leading-tight text-gray-900 mb-3 md:mb-4">
+        <h1 className="text-3xl px-4 md:text-5xl max-w-4xl mx-auto font-bold leading-tight text-gray-900 mb-3 md:mb-4">
           {title}
         </h1>
 
         {/* Excerpt */}
         {excerpt && (
-          <p className="text-gray-600 text-sm sm:text-base md:text-lg mb-6 max-w-4xl mx-auto">
+          <p className="text-gray-600 px-4 text-sm sm:text-base md:text-lg mb-6 max-w-4xl mx-auto">
             {excerpt}
           </p>
         )}
 
-        <hr className="border-gray-200 max-w-4xl mx-auto mb-6" />
+        <hr className="border-gray-200 px-4 max-w-4xl mx-auto mb-6" />
 
         {/* Author row */}
-        <div className="flex items-center max-w-4xl mx-auto justify-between mb-6">
+        <div className="flex px-4 items-center max-w-4xl mx-auto justify-between mb-6">
           <div className="flex items-center gap-3">
             {authorAvatar && (
               <img
@@ -211,7 +211,7 @@ export default async function BlogArticlePage({
           )}
         </div>
 
-        <hr className="border-gray-200 max-w-4xl mx-auto mb-6" />
+        <hr className="border-gray-200 px-4 max-w-4xl mx-auto mb-6" />
 
         {/* Featured Image */}
         {featuredImage && (
@@ -227,7 +227,7 @@ export default async function BlogArticlePage({
         )}
 
         {/* Content */}
-        <div className="w-full overflow-hidden max-w-4xl mx-auto">
+        <div className="w-full px-4 overflow-hidden max-w-4xl mx-auto">
           <div
             className="prose prose-lg max-w-full prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-p:break-words prose-a:text-orange-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-ul:text-gray-700 prose-ol:text-gray-700 prose-blockquote:border-orange-500 prose-blockquote:text-gray-600 prose-code:text-orange-600 prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-gray-900 prose-img:rounded-lg prose-img:max-w-full [&>*]:break-words [&>*]:max-w-full"
             dangerouslySetInnerHTML={{ __html: contentHtml }}
@@ -235,7 +235,7 @@ export default async function BlogArticlePage({
         </div>
 
         {/* Share Section */}
-        <div className="mt-12 mb-12 text-center">
+        <div className="mt-12 px-4 mb-12 text-center">
           <h3 className="text-xl font-semibold text-gray-900 mb-6">
             Share this article
           </h3>
@@ -295,7 +295,7 @@ export default async function BlogArticlePage({
 
         {/* Author Section */}
         {(authorName || authorAvatar) && (
-          <div className="bg-gray-50 rounded-lg p-6 md:p-8 ">
+          <div className="bg-gray-50 px-4 rounded-lg p-6 md:p-8 ">
             <div className="flex items-start max-w-4xl mx-auto gap-4">
               {authorAvatar ? (
                 <Image
