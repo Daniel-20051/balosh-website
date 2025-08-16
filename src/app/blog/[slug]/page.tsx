@@ -245,8 +245,10 @@ export default async function BlogArticlePage({
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
                 title
               )}&url=${encodeURIComponent(
-                process.env.NEXT_PUBLIC_SITE_URL || ""
-              )}/blog/${slug}`}
+                `https://${
+                  process.env.VERCEL_URL || "localhost:3000"
+                }/blog/${slug}`
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 bg-blue-500 hover:bg-blue-600 text-white rounded-lg flex items-center justify-center transition-colors duration-200"
@@ -259,7 +261,9 @@ export default async function BlogArticlePage({
             {/* LinkedIn */}
             <a
               href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-                (process.env.NEXT_PUBLIC_SITE_URL || "") + "/blog/" + slug
+                `https://${
+                  process.env.VERCEL_URL || "localhost:3000"
+                }/blog/${slug}`
               )}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -273,11 +277,9 @@ export default async function BlogArticlePage({
             {/* WhatsApp */}
             <a
               href={`https://wa.me/?text=${encodeURIComponent(
-                title +
-                  " " +
-                  (process.env.NEXT_PUBLIC_SITE_URL || "") +
-                  "/blog/" +
-                  slug
+                `https://${
+                  process.env.VERCEL_URL || "localhost:3000"
+                }/blog/${slug}`
               )}`}
               target="_blank"
               rel="noopener noreferrer"
