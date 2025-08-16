@@ -246,7 +246,7 @@ export default async function BlogArticlePage({
                 title
               )}&url=${encodeURIComponent(
                 `https://${
-                  process.env.VERCEL_URL || "localhost:3000"
+                  process.env.VERCEL_URL || "https://balosh-website.vercel.app/"
                 }/blog/${slug}`
               )}`}
               target="_blank"
@@ -262,7 +262,7 @@ export default async function BlogArticlePage({
             <a
               href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
                 `https://${
-                  process.env.VERCEL_URL || "localhost:3000"
+                  process.env.VERCEL_URL || "https://balosh-website.vercel.app/"
                 }/blog/${slug}`
               )}`}
               target="_blank"
@@ -278,7 +278,7 @@ export default async function BlogArticlePage({
             <a
               href={`https://wa.me/?text=${encodeURIComponent(
                 `https://${
-                  process.env.VERCEL_URL || "localhost:3000"
+                  process.env.VERCEL_URL || "https://balosh-website.vercel.app/"
                 }/blog/${slug}`
               )}`}
               target="_blank"
