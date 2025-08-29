@@ -105,10 +105,6 @@ export default function SolutionsSection({
                 icon={solution.icon}
                 title={solution.title}
                 description={solution.description}
-                features={solution.features}
-                href={solution.href}
-                linkColor={solution.linkColor}
-                hoverBorderColor={solution.hoverBorderColor}
                 iconBgColor={solution.iconBgColor}
                 onClick={() => onSolutionClick(solution)}
               />

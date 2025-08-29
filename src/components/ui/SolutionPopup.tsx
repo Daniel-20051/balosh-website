@@ -24,6 +24,7 @@ export default function SolutionPopup({
 }: SolutionPopupProps) {
   const popupRef = useRef<HTMLDivElement>(null);
   const [isClosing, setIsClosing] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   // Handle click outside to close
   useEffect(() => {
@@ -69,13 +70,17 @@ export default function SolutionPopup({
     setTimeout(() => {
       onClose();
       setIsClosing(false);
-    }, 300); // Match the animation duration
+    }, 300); // Match the transition duration
   };
 
-  // Reset closing state when opening
+  // Handle opening animation
   useEffect(() => {
     if (isOpen) {
       setIsClosing(false);
+      // Trigger fade-in animation
+      setTimeout(() => setIsVisible(true), 10);
+    } else {
+      setIsVisible(false);
     }
   }, [isOpen]);
 
@@ -85,8 +90,10 @@ export default function SolutionPopup({
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm transition-all duration-300 ${
-        isClosing ? "animate-out fade-out" : "animate-in fade-in"
+      className={`fixed inset-0 z-[9999] flex items-center justify-center p-4 transition-all duration-300 ${
+        isClosing
+          ? "bg-black/0 backdrop-blur-none"
+          : "bg-black/50 backdrop-blur-sm"
       }`}
       style={{
         position: "fixed",
@@ -103,8 +110,10 @@ export default function SolutionPopup({
         ref={popupRef}
         className={`relative bg-white rounded-3xl shadow-2xl transform transition-all duration-300 overflow-hidden max-w-4xl w-full max-h-[80vh] overflow-y-auto ${
           isClosing
-            ? "animate-out slide-out-to-bottom-4"
-            : "animate-in slide-in-from-bottom-4"
+            ? "scale-95 opacity-0 translate-y-4"
+            : isVisible
+            ? "scale-100 opacity-100 translate-y-0"
+            : "scale-95 opacity-0 translate-y-4"
         }`}
         style={{ margin: "auto" }}
       >
