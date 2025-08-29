@@ -241,6 +241,18 @@ const TrustedBy = () => {
       ),
     },
     {
+      name: "ATLANTIC BISCOE",
+      logo: (
+        <Image
+          src="/assets/atlanticbiscoe.png"
+          alt="WINGS"
+          width={200}
+          height={120}
+          className="w-30 h-30 md:w-50 md:h-50"
+        />
+      ),
+    },
+    {
       name: "Present House",
       logo: (
         <Image

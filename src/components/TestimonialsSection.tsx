@@ -19,37 +19,19 @@ export default function TestimonialsSection() {
     {
       id: 1,
       quote:
-        "TechSolutions transformed our airport operations completely. Their innovative approach and reliable technology have improved passenger experience significantly.",
-      name: "Sarah Johnson",
-      title: "Operations Director",
+        "Balosh Integrated Services have been managing our parking facilities since 2010, my experience with them has been a good on. Our customers have feedback to us that they are happy with the service they are receiving this mirrors my view of Balosh as well. I find them easy to communicate with and would recommend them as a car park management company to any business in need of their services",
+      name: "Tokumbo Omisore",
+      title: "(RIBA, FINA, PAUA)",
       company: "Metropolitan Airport",
       rating: 5,
     },
     {
       id: 2,
       quote:
-        "Balosh's access control solutions have revolutionized our security infrastructure. The integration was seamless and the support team is exceptional.",
-      name: "Michael Chen",
-      title: "Security Manager",
+        "Balosh Integrated Services have been providing paid parking services to The Palms Lekki. We are very pleased with their work, as the company is very responsive and quick to act. They are efficient and provide top-notch quality services.	",
+      name: "Bola Sobande (Mrs.)",
+      title: "Centre Manager",
       company: "Global Tech Corp",
-      rating: 5,
-    },
-    {
-      id: 3,
-      quote:
-        "The smart toll system implementation exceeded our expectations. Revenue collection increased by 40% while reducing operational costs.",
-      name: "David Rodriguez",
-      title: "Transport Director",
-      company: "City Transport Authority",
-      rating: 5,
-    },
-    {
-      id: 4,
-      quote:
-        "Outstanding service and cutting-edge technology. Balosh delivered our retail security solution on time and within budget.",
-      name: "Emily Watson",
-      title: "IT Director",
-      company: "Retail Chain Inc",
       rating: 5,
     },
   ];
@@ -140,9 +122,7 @@ export default function TestimonialsSection() {
               {/* Testimonial Content */}
               <div className="relative z-10">
                 {/* Rating */}
-                <div className="flex justify-center mb-4 md:mb-6">
-                  {renderStars(testimonials[currentIndex].rating)}
-                </div>
+                <div className="flex justify-center mb-4 md:mb-6"></div>
 
                 {/* Quote */}
                 <blockquote
@@ -161,8 +141,7 @@ export default function TestimonialsSection() {
                     {testimonials[currentIndex].name}
                   </div>
                   <div className="text-sm md:text-base text-gray-600">
-                    {testimonials[currentIndex].title},{" "}
-                    {testimonials[currentIndex].company}
+                    {testimonials[currentIndex].title}
                   </div>
                 </div>
               </div>

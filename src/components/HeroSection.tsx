@@ -8,8 +8,8 @@ interface CarouselSlide {
   subtitle: string;
   description: string;
   image: string;
-  ctaText: string;
-  ctaLink: string;
+  ctaText?: string;
+  ctaLink?: string;
 }
 
 const carouselSlides: CarouselSlide[] = [
@@ -32,8 +32,6 @@ const carouselSlides: CarouselSlide[] = [
       "Cutting-edge technology that protects what matters most to your organization",
     image:
       "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    ctaText: "View Case Studies",
-    ctaLink: "/case-studies",
   },
   {
     id: 3,
@@ -43,8 +41,6 @@ const carouselSlides: CarouselSlide[] = [
       "Serving Nigeria's top organizations with reliable access control since 2005",
     image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    ctaText: "Learn More",
-    ctaLink: "/about-us",
   },
   {
     id: 4,
@@ -54,8 +50,6 @@ const carouselSlides: CarouselSlide[] = [
       "Building the future with intelligent systems that adapt to your needs",
     image:
       "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    ctaText: "Get Started",
-    ctaLink: "/contact",
   },
 ];
 
@@ -154,18 +148,14 @@ export default function HeroSection() {
             {currentSlideData.description}
           </p>
           <div className="flex flex-col sm:flex-row gap-2 md:gap-3 lg:gap-4 justify-center">
-            <a
-              href={currentSlideData.ctaLink}
-              className="bg-orange-500 text-white px-3 md:px-4 lg:px-6 xl:px-8 py-1.5 md:py-2 lg:py-2.5 xl:py-3 rounded-full hover:bg-orange-600 transition-all duration-300 font-medium text-xs md:text-sm lg:text-base xl:text-lg transform hover:scale-105"
-            >
-              {currentSlideData.ctaText}
-            </a>
-            <a
-              href="/about-us"
-              className="border-2 border-white text-white px-3 md:px-4 lg:px-6 xl:px-8 py-1.5 md:py-2 lg:py-2.5 xl:py-3 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-xs md:text-sm lg:text-base xl:text-lg transform hover:scale-105"
-            >
-              Learn More
-            </a>
+            {currentSlideData.ctaText && (
+              <a
+                href={currentSlideData.ctaLink}
+                className="bg-orange-500 text-white px-3 md:px-4 lg:px-6 xl:px-8 py-1.5 md:py-2 lg:py-2.5 xl:py-3 rounded-full hover:bg-orange-600 transition-all duration-300 font-medium text-xs md:text-sm lg:text-base xl:text-lg transform hover:scale-105"
+              >
+                {currentSlideData.ctaText}
+              </a>
+            )}
           </div>
         </div>
       </div>

@@ -35,11 +35,11 @@ export default function HeroSection() {
       {/* Background image overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/solutions-hero.jpg"
+          src="/assets/solution-image.png"
           alt="Modern secure entrance"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
+          fill
+          className="object-cover"
+          priority
         />
         <div className="absolute inset-0 bg-black/50" />
       </div>
@@ -62,14 +62,6 @@ export default function HeroSection() {
           From access control to fare automation, we tailor every solution to
           your operational needs.
         </p>
-        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full max-w-md mx-auto">
-          <button className="w-full sm:w-auto bg-primary text-[#E5E7EB] cursor-pointer font-semibold px-6 md:px-8 py-3 md:py-4 rounded-md shadow hover:bg-primary/90 transition-colors text-sm md:text-base">
-            Get Started Today
-          </button>
-          <button className="w-full sm:w-auto border border-white text-white cursor-pointer font-semibold px-6 md:px-8 py-2 md:py-3 rounded-md hover:bg-white hover:text-primary transition-colors text-sm md:text-base">
-            Learn More
-          </button>
-        </div>
       </div>
     </section>
   );

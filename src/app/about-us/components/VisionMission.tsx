@@ -72,7 +72,7 @@ export default function VisionMission() {
                 : "opacity-0 -translate-y-8"
             }`}
           >
-            Our <span className="text-orange-500">Vision</span>
+            Our <span className="text-orange-500">Philosophy</span>
           </h2>
 
           {/* Orange underline */}
@@ -110,10 +110,7 @@ export default function VisionMission() {
                     Our Vision
                   </h3>
                   <p className="text-sm md:text-base text-[#9CA3AF] leading-relaxed">
-                    To be the premier provider of integrated security solutions
-                    across Africa, creating secure environments that empower
-                    businesses and communities while ensuring a brighter, safer
-                    future for all stakeholders.
+                    To be the first choice for access control solutions.
                   </p>
                 </div>
               </div>
@@ -142,10 +139,8 @@ export default function VisionMission() {
                     Our Mission
                   </h3>
                   <p className="text-sm md:text-base text-[#9CA3AF] leading-relaxed">
-                    To deliver world-class access control solutions through
-                    innovation, integrity, and customer-centricity, while
-                    maintaining our position as Nigeria&apos;s most trusted
-                    security technology partner.
+                    Our objective is to be the leader in every market we serve,
+                    to the benefit of our customers and stakeholders.
                   </p>
                 </div>
               </div>

@@ -9,14 +9,21 @@ interface Solution {
   title: string;
   description: string;
   features: string[];
+  href: string;
+  linkColor: string;
+  hoverBorderColor: string;
   iconBgColor: string;
 }
 
 interface SolutionsSectionProps {
   solutions: Solution[];
+  onSolutionClick: (solution: Solution) => void;
 }
 
-export default function SolutionsSection({ solutions }: SolutionsSectionProps) {
+export default function SolutionsSection({
+  solutions,
+  onSolutionClick,
+}: SolutionsSectionProps) {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -98,7 +105,12 @@ export default function SolutionsSection({ solutions }: SolutionsSectionProps) {
                 icon={solution.icon}
                 title={solution.title}
                 description={solution.description}
+                features={solution.features}
+                href={solution.href}
+                linkColor={solution.linkColor}
+                hoverBorderColor={solution.hoverBorderColor}
                 iconBgColor={solution.iconBgColor}
+                onClick={() => onSolutionClick(solution)}
               />
             </div>
           ))}

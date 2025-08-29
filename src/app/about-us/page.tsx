@@ -1,10 +1,11 @@
 import React from "react";
 import AboutUsHero from "./components/AboutUsHero";
 import AboutUsStory from "./components/AboutUsStory";
-import HowWeWork from "./components/HowWeWork";
+// import HowWeWork from "./components/HowWeWork";
 import VisionMission from "./components/VisionMission";
 import CoreValues from "./components/CoreValues";
 import CoreCompetencies from "./components/CoreCompetencies";
+import WhyBalosh from "./components/WhyBalosh";
 import OurJourney from "./components/OurJourney";
 import SolutionsShowcase from "./components/SolutionsShowcase";
 import MeetTheTeam from "./components/MeetTheTeam";
@@ -14,13 +15,14 @@ const page = () => {
     <div>
       <AboutUsHero />
       <AboutUsStory />
-      <HowWeWork />
-      <VisionMission />
       <CoreValues />
+      <WhyBalosh />
+      {/* <HowWeWork /> */}
+      <VisionMission />
       <CoreCompetencies />
-      <OurJourney />
+      {/* <OurJourney /> */}
       <SolutionsShowcase />
-      <MeetTheTeam />
+      {/* <MeetTheTeam /> */}
     </div>
   );
 };

@@ -89,20 +89,7 @@ export default function AboutUsHero() {
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-8"
             }`}
-          >
-            <Link
-              href="/solutions"
-              className="bg-orange-500 text-white px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              Our Solutions
-            </Link>
-            <Link
-              href="/contact"
-              className="bg-transparent text-primary border-2 border-primary px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg font-semibold hover:bg-orange-50 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              Contact Us
-            </Link>
-          </div>
+          ></div>
         </div>
       </div>
     </section>

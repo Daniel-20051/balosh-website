@@ -147,6 +147,46 @@ export default function AboutSection() {
               <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold">
                 <svg
                   className="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.37988 12.0001L10.7899 14.4201L15.6199 9.58008"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M4.23988 6.20008C4.23988 5.14008 5.10988 4.27008 6.16988 4.27008H7.89988C8.29988 4.27008 8.85988 4.06008 9.15988 3.81008L10.7399 2.46008C11.4399 1.87008 12.5699 1.87008 13.2499 2.46008L14.8299 3.81008C15.1299 4.06008 15.6999 4.27008 16.0999 4.27008H17.7999C18.8599 4.27008 19.7299 5.14008 19.7299 6.20008V7.90008C19.7299 8.30008 19.9399 8.86008 20.1899 9.16008L21.5399 10.7401C22.1299 11.4401 22.1299 12.5701 21.5399 13.2501L20.1899 14.8301C19.9399 15.1301 19.7299 15.6901 19.7299 16.0901V17.7901C19.7299 18.8501 18.8599 19.7201 17.7999 19.7201H16.0999C15.6999 19.7201 15.1399 19.9301 14.8399 20.1801L13.2599 21.5301C12.5599 22.1201 11.4299 22.1201 10.7499 21.5301L9.16988 20.1801C8.86988 19.9301 8.29988 19.7201 7.90988 19.7201H6.16988C5.10988 19.7201 4.23988 18.8501 4.23988 17.7901V16.0801C4.23988 15.6901 4.03988 15.1201 3.78988 14.8301L2.43988 13.2401C1.85988 12.5501 1.85988 11.4301 2.43988 10.7401L2.99988 10.0801"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <span>Integrity</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold">
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4.5 12h15M4.5 16.5h15M4.5 7.5h15"
+                  />
+                </svg>
+                <span>Consistency</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold">
+                <svg
+                  className="w-4 h-4"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
@@ -158,55 +198,7 @@ export default function AboutSection() {
                     d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
                   />
                 </svg>
-                <span>Customer-centricity</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold">
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
-                  />
-                </svg>
-                <span>Innovation</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold">
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0"
-                  />
-                </svg>
-                <span>Excellence</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold">
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
-                  />
-                </svg>
-                <span>Teamwork</span>
+                <span>Customer Service</span>
               </div>
             </div>
           </div>

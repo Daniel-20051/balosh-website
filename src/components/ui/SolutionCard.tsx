@@ -1,8 +1,15 @@
+"use client";
+
 interface SolutionCardProps {
   title: string;
   description: string;
   icon: React.ReactNode;
   iconBgColor: string;
+  features: string[];
+  href: string;
+  linkColor: string;
+  hoverBorderColor: string;
+  onClick: () => void;
 }
 
 export default function SolutionCard({
@@ -10,9 +17,17 @@ export default function SolutionCard({
   title,
   description,
   iconBgColor,
+  features,
+  href,
+  linkColor,
+  hoverBorderColor,
+  onClick,
 }: SolutionCardProps) {
   return (
-    <div className="group relative bg-white rounded-3xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-orange-200 overflow-hidden h-full flex flex-col">
+    <div
+      className="group relative bg-white rounded-3xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-orange-200 overflow-hidden h-full flex flex-col cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+      onClick={onClick}
+    >
       {/* Background gradient overlay on hover */}
       <div className="absolute inset-0 bg-gradient-to-br from-orange-50/0 to-orange-100/0 group-hover:from-orange-50/30 group-hover:to-orange-100/20 transition-all duration-500 rounded-3xl"></div>
 

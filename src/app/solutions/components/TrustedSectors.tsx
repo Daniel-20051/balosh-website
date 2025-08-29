@@ -262,7 +262,7 @@ export default function TrustedSectors() {
         </div>
 
         {/* Statistics Section */}
-        <div className="bg-white max-w-2xl rounded-2xl shadow-md p-4 border border-gray-100">
+        <div className="bg-white max-w-2xl mx-auto rounded-2xl shadow-md p-4 border border-gray-100">
           <div className="grid grid-cols-3 gap-3 md:gap-4 lg:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="flex items-center gap-2 md:gap-4">

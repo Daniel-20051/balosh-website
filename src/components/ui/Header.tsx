@@ -229,16 +229,73 @@ const Header = () => {
             >
               Home
             </Link>
-            <Link
-              href="/about-us"
-              className={`font-medium px-2 py-1 transition-colors duration-200 ${
-                pathname === "/about-us"
-                  ? " text-primary"
-                  : "text-gray-900 hover:text-primary"
-              }`}
-            >
-              About Us
-            </Link>
+            <div className="relative group">
+              <Link
+                href="/about-us"
+                className={`font-medium px-2 py-1 flex items-center gap-1 transition-colors duration-200 ${
+                  pathname === "/about-us"
+                    ? " text-primary"
+                    : "text-gray-900 group-hover:text-primary"
+                }`}
+              >
+                <span>About Us</span>
+                <svg
+                  className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 9l6 6 6-6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </Link>
+              {/* Dropdown */}
+              <div className="pointer-events-none invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 absolute left-0 mt-3 min-w-[14rem]">
+                <div className="pointer-events-auto rounded-2xl shadow-2xl border border-gray-100 bg-white p-2 ring-1 ring-black/5">
+                  <Link
+                    href="/md-message"
+                    className="flex items-center gap-3 px-4 py-3 text-sm text-gray-800 rounded-lg hover:bg-gray-50 hover:text-primary transition-colors"
+                  >
+                    <svg
+                      className="w-4 h-4 text-gray-400"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M4 5h16M4 12h16M4 19h10"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                    <span className="font-medium">MD's Message</span>
+                  </Link>
+                  <div className="h-2" />
+                  <Link
+                    href="/our-people"
+                    className="flex items-center gap-3 px-4 py-3 text-sm text-gray-800 rounded-lg hover:bg-gray-50 hover:text-primary transition-colors"
+                  >
+                    <svg
+                      className="w-4 h-4 text-gray-400"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M16 11c1.657 0 3-1.567 3-3.5S17.657 4 16 4s-3 1.567-3 3.5 1.343 3.5 3 3.5zM8 11c1.657 0 3-1.567 3-3.5S9.657 4 8 4 5 5.567 5 7.5 6.343 11 8 11zm0 2c-2.673 0-8 1.34-8 4v1h12v-1c0-2.66-5.327-4-8-4zm8 0c-.56 0-1.2.05-1.88.14 1.35.78 2.88 1.99 2.88 3.86v1H24v-1c0-2.66-5.327-4-8-4z"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                      />
+                    </svg>
+                    <span className="font-medium">Our People</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
             <Link
               href="/solutions"
               className={`font-medium px-2 py-1 transition-colors duration-200 ${
@@ -269,16 +326,28 @@ const Header = () => {
             >
               Careers
             </Link>
+            <Link
+              href="/contact-us"
+              className={`font-medium px-2 py-1 transition-colors duration-200 ${
+                pathname === "/contact-us"
+                  ? " text-primary"
+                  : "text-gray-900 hover:text-primary"
+              }`}
+            >
+              Contact Us
+            </Link>
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link
-              href="/request-demo"
+            <a
+              href="https://wa.me/2348022596060?text=Hello%20Balosh%2C%20I%27d%20like%20to%20request%20a%20demo."
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary text-white shadow-md px-6 py-3  rounded-md hover:scale-110 transition-transform duration-200 font-medium"
             >
               Request a Demo
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Component */}

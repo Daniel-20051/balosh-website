@@ -4,6 +4,7 @@ import { Inter, Caveat } from "next/font/google";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
 import NewsLetter from "@/components/ui/NewsLetter";
+import WhatsAppWidget from "@/components/ui/WhatsAppWidget";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -39,6 +40,7 @@ export default function RootLayout({
         {children}
         <NewsLetter />
         <Footer />
+        <WhatsAppWidget />
       </body>
     </html>
   );

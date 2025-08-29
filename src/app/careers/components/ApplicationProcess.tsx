@@ -9,15 +9,15 @@ const processSteps = [
   },
   {
     number: 2,
-    title: "Phone Screening",
+    title: "Virtual Interview",
     description:
-      "Initial conversation with our team to discuss your background and interests.",
+      "Meet us online for a video interview to discuss your background and interests.",
   },
   {
     number: 3,
-    title: "Interview",
+    title: "Physical Interview",
     description:
-      "Meet with the hiring manager and team members to discuss the role and your experience.",
+      "On-site interview with the hiring manager and team to go deeper on the role.",
   },
   {
     number: 4,
