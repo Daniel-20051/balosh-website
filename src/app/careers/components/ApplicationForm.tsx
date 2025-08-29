@@ -1,5 +1,4 @@
 "use client";
-
 import { FormEvent, useMemo, useState } from "react";
 import CustomSelect, { Option } from "./CustomSelect";
 
@@ -44,6 +43,7 @@ export default function ApplicationForm() {
       alert("Application submitted successfully! We will be in touch.");
       form.reset();
     } catch (error) {
+      console.error(error);
       alert(
         "There was a problem submitting your application. Please try again."
       );

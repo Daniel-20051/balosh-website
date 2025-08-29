@@ -6,9 +6,9 @@ import VisionMission from "./components/VisionMission";
 import CoreValues from "./components/CoreValues";
 import CoreCompetencies from "./components/CoreCompetencies";
 import WhyBalosh from "./components/WhyBalosh";
-import OurJourney from "./components/OurJourney";
+// import OurJourney from "./components/OurJourney";
 import SolutionsShowcase from "./components/SolutionsShowcase";
-import MeetTheTeam from "./components/MeetTheTeam";
+// import MeetTheTeam from "./components/MeetTheTeam";
 
 const page = () => {
   return (

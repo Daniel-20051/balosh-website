@@ -191,7 +191,7 @@ export default async function BlogArticlePage({
         <div className="flex px-4 items-center max-w-4xl mx-auto justify-between mb-6">
           <div className="flex items-center gap-3">
             {authorAvatar && (
-              <img
+              <Image
                 src={authorAvatar}
                 alt={authorName}
                 className="w-10 h-10 rounded-full object-cover"
