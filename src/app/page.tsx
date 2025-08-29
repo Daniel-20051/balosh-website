@@ -12,12 +12,36 @@ import TrustedBy from "@/components/ui/TrustedBy";
 import SolutionPopup from "@/components/ui/SolutionPopup";
 import { getRecentBlogs } from "@/app/api";
 
-export default function Home() {
-  const [selectedSolution, setSelectedSolution] = useState<any>(null);
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [recentBlogs, setRecentBlogs] = useState([]);
+interface Solution {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  features: string[];
+  href: string;
+  iconBgColor: string;
+  linkColor: string;
+  hoverBorderColor: string;
+}
 
-  const handleSolutionClick = (solution: any) => {
+interface ApiBlogItem {
+  _id: string;
+  title: string;
+  excerpt?: string;
+  autoExcerpt?: string;
+  featuredImage: string;
+  category?: { name?: string } | null;
+  readTime?: number;
+  slug?: string;
+}
+
+export default function Home() {
+  const [selectedSolution, setSelectedSolution] = useState<Solution | null>(
+    null
+  );
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [recentBlogs, setRecentBlogs] = useState<ApiBlogItem[]>([]);
+
+  const handleSolutionClick = (solution: Solution) => {
     setSelectedSolution(solution);
     setIsPopupOpen(true);
   };

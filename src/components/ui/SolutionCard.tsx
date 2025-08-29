@@ -5,10 +5,6 @@ interface SolutionCardProps {
   description: string;
   icon: React.ReactNode;
   iconBgColor: string;
-  features: string[];
-  href: string;
-  linkColor: string;
-  hoverBorderColor: string;
   onClick: () => void;
 }
 
@@ -17,10 +13,6 @@ export default function SolutionCard({
   title,
   description,
   iconBgColor,
-  features,
-  href,
-  linkColor,
-  hoverBorderColor,
   onClick,
 }: SolutionCardProps) {
   return (
