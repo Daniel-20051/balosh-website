@@ -22,13 +22,13 @@ export default function SectionHeader({
       className={`text-center mb-12 md:mb-16 flex flex-col items-center gap-3 ${className}`}
     >
       <Badge className="mb-6" icon={badgeIcon} text={badgeText} />
-      <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-3">
+      <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-3 font-garamond">
         {title}
         {titleHighlight && (
           <span className="text-orange-500"> {titleHighlight}</span>
         )}
       </h2>
-      <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+      <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto font-gotham">
         {description}
       </p>
     </div>

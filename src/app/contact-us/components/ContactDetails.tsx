@@ -101,12 +101,12 @@ export default function ContactDetails() {
                   Head Office
                 </h3>
                 <p className="mt-2 text-base text-gray-600">
-                  15b Omorinre Johnson Street, Lekki Phase I,
+                  9, Osaro Isokpan street, Lekki Phase 1,
                   <br /> Lagos 106104, Lagos
                   <br /> Nigeria
                 </p>
                 <a
-                  href="https://www.google.com/maps/dir/?api=1&destination=15b%20Omorinre%20Johnson%20Street%2C%20Lekki%20Phase%20I%2C%20Lagos%20106104%2C%20Lagos%2C%20Nigeria"
+                  href="https://www.google.com/maps/dir/?api=1&destination=9%2C%20Osaro%20Isokpan%20street%2C%20Lekki%20Phase%201%2C%20Lagos%20106104%2C%20Lagos%2C%20Nigeria"
                   className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-orange-600 hover:underline"
                 >
                   <ExternalIcon /> Get Directions
@@ -148,8 +148,8 @@ export default function ContactDetails() {
                 </h3>
                 <ul className="mt-2 text-base text-gray-600">
                   <li>General: info@balosh.com</li>
-                  <li>Sales: sales@balosh.com</li>
-                  <li>Support: support@balosh.com</li>
+                  {/* <li>Sales: sales@balosh.com</li>
+                  <li>Support: support@balosh.com</li> */}
                 </ul>
                 <p className="mt-3 flex items-center gap-2 text-sm text-green-600">
                   <span className="inline-block h-2 w-2 rounded-full bg-green-500" />{" "}
@@ -169,9 +169,9 @@ export default function ContactDetails() {
                   Business Hours
                 </h3>
                 <p className="mt-2 text-base text-gray-600">
-                  Monday - Friday: 8:00 AM - 6:00 PM
-                  <br /> Saturday: 9:00 AM - 2:00 PM
-                  <br /> Sunday: Closed (Emergency support available)
+                  Monday - Friday: 8:00 AM - 5:00 PM
+                  {/* <br /> Saturday: 9:00 AM - 2:00 PM
+                  <br /> Sunday: Closed (Emergency support available) */}
                 </p>
               </div>
             </div>

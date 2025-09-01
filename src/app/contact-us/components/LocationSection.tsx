@@ -147,10 +147,9 @@ export default function LocationSection() {
                 title="Balosh office location"
                 className="absolute inset-0 h-full w-full"
                 style={{ border: 0 }}
-                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 allowFullScreen
-                src="https://www.google.com/maps?q=15b%20Omorinre%20Johnson%20Street%2C%20Lekki%20Phase%20I%2C%20Lagos%20106104%2C%20Lagos%2C%20Nigeria&output=embed"
+                src="https://www.google.com/maps?q=9%2C%20Osaro%20Isokpan%20street%2C%20Lekki%20Phase%201%2C%20Lagos%20106104%2C%20Lagos%2C%20Nigeria&output=embed"
               />
             </div>
             <div className="flex items-center justify-between gap-4 border-t border-gray-100 p-4">
@@ -159,12 +158,12 @@ export default function LocationSection() {
                   Balosh Integrated Services
                 </p>
                 <p className="text-sm text-gray-600">
-                  15b Omorinre Johnson Street, Lekki Phase I, Lagos 106104,
-                  Lagos, Nigeria
+                  9, Osaro Isokpan street, Lekki Phase 1, Lagos 106104, Lagos,
+                  Nigeria
                 </p>
               </div>
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=15b%20Omorinre%20Johnson%20Street%2C%20Lekki%20Phase%20I%2C%20Lagos%20106104%2C%20Lagos%2C%20Nigeria"
+                href="https://www.google.com/maps/dir/?api=1&destination=9%2C%20Osaro%20Isokpan%20street%2C%20Lekki%20Phase%201%2C%20Lagos%20106104%2C%20Lagos%2C%20Nigeria"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-xl bg-orange-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-orange-500"

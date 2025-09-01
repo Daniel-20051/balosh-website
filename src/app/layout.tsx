@@ -1,19 +1,26 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter, Caveat } from "next/font/google";
+import { EB_Garamond, Inter } from "next/font/google";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
 import NewsLetter from "@/components/ui/NewsLetter";
 import WhatsAppWidget from "@/components/ui/WhatsAppWidget";
-const inter = Inter({
+
+// Garamond - Primary display typeface (serif)
+const garamond = EB_Garamond({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-garamond",
+  weight: ["400", "500", "600", "700"],
 });
 
-const caveat = Caveat({
+// Gotham - Secondary display typeface (sans-serif) - using Inter as closest alternative
+const gotham = Inter({
   subsets: ["latin"],
-  variable: "--font-caveat",
+  variable: "--font-gotham",
+  weight: ["400", "500", "600", "700"],
 });
+
+// Andhibath Demo - Funky display font (will be loaded via CSS)
 
 export const metadata: Metadata = {
   title: "Balosh Integrated Services - Leading Access Control Company",
@@ -34,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased pt-[104px] ${inter.variable} ${caveat.variable}`}
+        className={`antialiased pt-[104px] ${garamond.variable} ${gotham.variable}`}
       >
         <Header />
         {children}
