@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 z-50 w-full">
       {/* Top bar with contact info and social media */}
-      <div className="bg-black text-[#ffffff]py-2 px-4 overflow-hidden">
+      <div className="bg-black text-[#ffffff] py-2 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           {/* Desktop Layout */}
           <div className="hidden md:flex items-center justify-between text-sm">
@@ -114,7 +114,7 @@ const Header = () => {
 
           {/* Mobile Carousel Layout */}
           <div className="md:hidden">
-            <div className="flex items-center justify-center space-x-4 text-xs px-2 py-2">
+            <div className="flex items-center  justify-center space-x-4 text-xs px-2 py-2">
               <a
                 href="mailto:info@balosh.com"
                 className="hover:text-orange-300 transition-colors duration-200 whitespace-nowrap"
