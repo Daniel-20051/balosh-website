@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 
 const MobileMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const pathname = usePathname();
 
   const toggleMenu = () => {
@@ -88,17 +89,70 @@ const MobileMenu = () => {
               >
                 Home
               </Link>
-              <Link
-                href="/about-us"
-                className={`block text-lg font-medium py-2 transition-colors duration-200 ${
-                  pathname === "/about-us"
-                    ? "underline text-primary"
-                    : "text-gray-900 hover:text-orange-500"
-                }`}
-                onClick={toggleMenu}
-              >
-                About Us
-              </Link>
+              <div>
+                <button
+                  type="button"
+                  className="w-full flex items-center justify-between text-left text-lg font-medium py-2 text-gray-900 hover:text-orange-500"
+                  onClick={() => setIsAboutOpen(!isAboutOpen)}
+                  aria-expanded={isAboutOpen}
+                  aria-controls="about-submenu"
+                >
+                  <span>About Us</span>
+                  <svg
+                    className={`w-4 h-4 transition-transform duration-200 ${
+                      isAboutOpen ? "rotate-180" : "rotate-0"
+                    }`}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 9l6 6 6-6"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+                {isAboutOpen && (
+                  <div id="about-submenu" className="mt-1 space-y-3 pl-4">
+                    <Link
+                      href="/about-us"
+                      className={`block text-base py-1 transition-colors duration-200 ${
+                        pathname === "/about-us"
+                          ? "underline text-primary"
+                          : "text-gray-900 hover:text-orange-500"
+                      }`}
+                      onClick={toggleMenu}
+                    >
+                      Overview
+                    </Link>
+                    <Link
+                      href="/md-message"
+                      className={`block text-base py-1 transition-colors duration-200 ${
+                        pathname === "/md-message"
+                          ? "underline text-primary"
+                          : "text-gray-900 hover:text-orange-500"
+                      }`}
+                      onClick={toggleMenu}
+                    >
+                      MD's Message
+                    </Link>
+                    <Link
+                      href="/our-people"
+                      className={`block text-base py-1 transition-colors duration-200 ${
+                        pathname === "/our-people"
+                          ? "underline text-primary"
+                          : "text-gray-900 hover:text-orange-500"
+                      }`}
+                      onClick={toggleMenu}
+                    >
+                      Our People
+                    </Link>
+                  </div>
+                )}
+              </div>
               <Link
                 href="/solutions"
                 className={`block text-lg font-medium py-2 transition-colors duration-200 ${
