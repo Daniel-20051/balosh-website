@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 z-50 w-full">
       {/* Top bar with contact info and social media */}
-      <div className="bg-black text-primary py-2 px-4 overflow-hidden">
+      <div className="bg-black text-[#ffffff]py-2 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           {/* Desktop Layout */}
           <div className="hidden md:flex items-center justify-between text-sm">
