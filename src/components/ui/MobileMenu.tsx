@@ -77,22 +77,24 @@ const MobileMenu = () => {
 
           {/* Mobile Navigation Links */}
           <nav className="flex-1 p-6">
-            <div className="space-y-6">
-              <Link
-                href="/"
-                className={`block text-lg font-medium py-2 transition-colors duration-200 ${
-                  pathname === "/"
-                    ? "underline text-primary"
-                    : "text-gray-900 hover:text-orange-500"
-                }`}
-                onClick={toggleMenu}
-              >
-                Home
-              </Link>
-              <div>
+            <div className="space-y-0">
+              <div className="border-b-2 border-gray-300">
+                <Link
+                  href="/"
+                  className={`block text-lg font-medium py-3 transition-colors duration-200 ${
+                    pathname === "/"
+                      ? "underline text-primary"
+                      : "text-gray-900 hover:text-orange-500"
+                  }`}
+                  onClick={toggleMenu}
+                >
+                  Home
+                </Link>
+              </div>
+              <div className="border-b-2 border-gray-300">
                 <button
                   type="button"
-                  className="w-full flex items-center justify-between text-left text-lg font-medium py-2 text-gray-900 hover:text-orange-500"
+                  className="w-full flex items-center justify-between text-left text-lg font-medium py-3 text-gray-900 hover:text-orange-500"
                   onClick={() => setIsAboutOpen(!isAboutOpen)}
                   aria-expanded={isAboutOpen}
                   aria-controls="about-submenu"
@@ -116,76 +118,88 @@ const MobileMenu = () => {
                   </svg>
                 </button>
                 {isAboutOpen && (
-                  <div id="about-submenu" className="mt-1 space-y-3 pl-4">
-                    <Link
-                      href="/about-us"
-                      className={`block text-base py-1 transition-colors duration-200 ${
-                        pathname === "/about-us"
-                          ? "underline text-primary"
-                          : "text-gray-900 hover:text-orange-500"
-                      }`}
-                      onClick={toggleMenu}
-                    >
-                      Overview
-                    </Link>
-                    <Link
-                      href="/md-message"
-                      className={`block text-base py-1 transition-colors duration-200 ${
-                        pathname === "/md-message"
-                          ? "underline text-primary"
-                          : "text-gray-900 hover:text-orange-500"
-                      }`}
-                      onClick={toggleMenu}
-                    >
-                      MD&apos;s Message
-                    </Link>
-                    <Link
-                      href="/our-people"
-                      className={`block text-base py-1 transition-colors duration-200 ${
-                        pathname === "/our-people"
-                          ? "underline text-primary"
-                          : "text-gray-900 hover:text-orange-500"
-                      }`}
-                      onClick={toggleMenu}
-                    >
-                      Our People
-                    </Link>
+                  <div id="about-submenu" className="space-y-0 pl-4">
+                    <div className="border-t border-gray-300">
+                      <Link
+                        href="/about-us"
+                        className={`block text-base py-3 transition-colors duration-200 ${
+                          pathname === "/about-us"
+                            ? "underline text-primary"
+                            : "text-gray-900 hover:text-orange-500"
+                        }`}
+                        onClick={toggleMenu}
+                      >
+                        Overview
+                      </Link>
+                    </div>
+                    <div className="border-t border-gray-300">
+                      <Link
+                        href="/md-message"
+                        className={`block text-base py-3 transition-colors duration-200 ${
+                          pathname === "/md-message"
+                            ? "underline text-primary"
+                            : "text-gray-900 hover:text-orange-500"
+                        }`}
+                        onClick={toggleMenu}
+                      >
+                        MD&apos;s Message
+                      </Link>
+                    </div>
+                    <div className="border-t border-gray-300">
+                      <Link
+                        href="/our-people"
+                        className={`block text-base py-3 transition-colors duration-200 ${
+                          pathname === "/our-people"
+                            ? "underline text-primary"
+                            : "text-gray-900 hover:text-orange-500"
+                        }`}
+                        onClick={toggleMenu}
+                      >
+                        Our People
+                      </Link>
+                    </div>
                   </div>
                 )}
               </div>
-              <Link
-                href="/solutions"
-                className={`block text-lg font-medium py-2 transition-colors duration-200 ${
-                  pathname === "/solutions"
-                    ? "underline text-primary"
-                    : "text-gray-900 hover:text-orange-500"
-                }`}
-                onClick={toggleMenu}
-              >
-                Solutions
-              </Link>
-              <Link
-                href="/blog"
-                className={`block text-lg font-medium py-2 transition-colors duration-200 ${
-                  pathname === "/blog"
-                    ? "underline text-primary"
-                    : "text-gray-900 hover:text-orange-500"
-                }`}
-                onClick={toggleMenu}
-              >
-                Blog
-              </Link>
-              <Link
-                href="/careers"
-                className={`block text-lg font-medium py-2 transition-colors duration-200 ${
-                  pathname === "/careers"
-                    ? "underline text-primary"
-                    : "text-gray-900 hover:text-orange-500"
-                }`}
-                onClick={toggleMenu}
-              >
-                Careers
-              </Link>
+              <div className="border-b-2 border-gray-300">
+                <Link
+                  href="/solutions"
+                  className={`block text-lg font-medium py-3 transition-colors duration-200 ${
+                    pathname === "/solutions"
+                      ? "underline text-primary"
+                      : "text-gray-900 hover:text-orange-500"
+                  }`}
+                  onClick={toggleMenu}
+                >
+                  Solutions
+                </Link>
+              </div>
+              <div className="border-b-2 border-gray-300">
+                <Link
+                  href="/blog"
+                  className={`block text-lg font-medium py-3 transition-colors duration-200 ${
+                    pathname === "/blog"
+                      ? "underline text-primary"
+                      : "text-gray-900 hover:text-orange-500"
+                  }`}
+                  onClick={toggleMenu}
+                >
+                  Blog
+                </Link>
+              </div>
+              <div className="border-b-2 border-gray-300">
+                <Link
+                  href="/careers"
+                  className={`block text-lg font-medium py-3 transition-colors duration-200 ${
+                    pathname === "/careers"
+                      ? "underline text-primary"
+                      : "text-gray-900 hover:text-orange-500"
+                  }`}
+                  onClick={toggleMenu}
+                >
+                  Careers
+                </Link>
+              </div>
             </div>
           </nav>
 
