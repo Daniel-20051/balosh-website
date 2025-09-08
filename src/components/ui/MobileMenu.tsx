@@ -137,7 +137,7 @@ const MobileMenu = () => {
                       }`}
                       onClick={toggleMenu}
                     >
-                      MD's Message
+                      MD&apos;s Message
                     </Link>
                     <Link
                       href="/our-people"
