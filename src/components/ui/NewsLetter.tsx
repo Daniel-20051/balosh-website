@@ -33,10 +33,10 @@ const NewsLetter = () => {
       }}
     >
       {/* Background decorative circles */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-5 right-1/2 w-40 h-40 sm:w-100 sm:h-100 bg-orange-500/10 rounded-full "></div>
         <div className="absolute -bottom-5 right-1/4 w-24 h-24 sm:w-60 sm:h-60 bg-orange-500/10 rounded-full "></div>
-      </div>
+      </div> */}
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">

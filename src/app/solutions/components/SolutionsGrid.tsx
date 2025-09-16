@@ -8,7 +8,7 @@ const solutions = [
     title: "Access Control Systems",
     description:
       "Biometrics, RFID cards, barriers, and turnstiles for secure entry management across all facility types.",
-    image: "https://picsum.photos/400/300?random=1",
+    image: "/assets/access-controll.jpg",
     badge: "AC",
     badgeColor: "bg-orange-500",
     icon: (
@@ -22,7 +22,7 @@ const solutions = [
     title: "Automated Entrances",
     description:
       "Sliding doors, swing gates, roller shutters, and retractable bollards for seamless access control.",
-    image: "https://picsum.photos/400/300?random=2",
+    image: "/assets/automated-entrance.jpg",
     badge: "AE",
     badgeColor: "bg-blue-400",
     icon: (
@@ -36,7 +36,7 @@ const solutions = [
     title: "Car Park Management",
     description:
       "Automated parking access, ticketing systems, and boom barriers for efficient vehicle management made to measure.",
-    image: "https://picsum.photos/400/300?random=3",
+    image: "/assets/car-access.jpg",
     badge: "CP",
     badgeColor: "bg-green-500",
     icon: (
@@ -50,7 +50,7 @@ const solutions = [
     title: "Automatic Fare Collection",
     description:
       "Digital ticketing and access systems for high-traffic events and transport infrastructure made to measure.",
-    image: "https://picsum.photos/400/300?random=4",
+    image: "/assets/fare-collection.jpg",
     badge: "AF",
     badgeColor: "bg-purple-500",
     icon: (
@@ -64,7 +64,7 @@ const solutions = [
     title: "Traffic & Toll Management",
     description:
       "Vehicle barriers, road-side toll collection, and traffic control solutions for urban infrastructure.",
-    image: "https://picsum.photos/400/300?random=5",
+    image: "/assets/traffic-managment.jpg",
     badge: "TT",
     badgeColor: "bg-red-500",
     icon: (
@@ -78,7 +78,7 @@ const solutions = [
     title: "Security Equipment Supply",
     description:
       "CCTV, walk-through metal detectors, safety signage, and turnstiles for comprehensive security.",
-    image: "https://picsum.photos/400/300?random=6",
+    image: "/assets/security.jpg",
     badge: "SE",
     badgeColor: "bg-blue-600",
     icon: (
@@ -92,7 +92,7 @@ const solutions = [
     title: "Turnkey Project Delivery",
     description:
       "Complete end-to-end service including design, installation, testing, and maintenance of all deployed infrastructure. Our comprehensive approach ensures seamless integration and optimal performance across all systems.",
-    image: "https://picsum.photos/600/300?random=7",
+    image: "/assets/turnkey.jpg",
     badge: "TP",
     badgeColor: "bg-orange-500",
     icon: (
@@ -185,12 +185,12 @@ export default function SolutionsGrid() {
                     width={400}
                     height={300}
                   />
-                  {/* Badge */}
+                  {/* Badge
                   <div
                     className={`absolute top-4 right-4 w-8 h-8 ${solution.badgeColor} rounded-full flex items-center justify-center text-white text-xs font-bold`}
                   >
                     {solution.badge}
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Content */}
@@ -221,31 +221,31 @@ export default function SolutionsGrid() {
                   : "opacity-0 translate-y-8"
               }`}
             >
-              <div className="group bg-[#FBF8F4] border-1 border-primary/20 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer w-full">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 items-center">
+              <div className="group bg-[#FBF8F4]  border-1 border-primary/20 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 items-center">
                   {/* Image Container */}
-                  <div className="relative h-48 sm:h-56 lg:h-full overflow-hidden w-full">
+                  <div className="relative h-40 sm:h-48 lg:h-64 overflow-hidden w-full">
                     <Image
                       src={solution.image}
                       alt={solution.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       width={400}
-                      height={300}
+                      height={100}
                     />
-                    {/* Badge */}
+                    {/* Badge
                     <div
                       className={`absolute top-4 right-4 w-8 h-8 ${solution.badgeColor} rounded-full flex items-center justify-center text-white text-xs font-bold`}
                     >
                       {solution.badge}
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Content */}
-                  <div className="flex flex-col px-4 sm:px-6 lg:px-8 gap-3 md:gap-4 py-6 md:py-8 lg:py-12 lg:col-span-2 w-full">
-                    <div className="flex mb-3 md:mb-4">
-                      <div className="w-12 h-12 md:w-15 md:h-15 bg-orange-100 rounded-lg flex items-center justify-center mr-3 md:mr-4">
+                  <div className="flex flex-col px-4 sm:px-6 lg:px-6 gap-3 py-4 md:py-6 lg:py-8 lg:col-span-2 w-full">
+                    <div className="flex mb-2 md:mb-3">
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-3">
                         <svg
-                          className="w-6 h-6 md:w-8 md:h-8 text-orange-500"
+                          className="w-5 h-5 md:w-6 md:h-6 text-orange-500"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
@@ -254,10 +254,10 @@ export default function SolutionsGrid() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-5 text-7 text-gray-900 transition-colors duration-200">
+                      <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-7 text-gray-900 transition-colors duration-200">
                         {solution.title}
                       </h3>
-                      <p className="text-sm md:text-base text-[#525252] text-2 mb-4 md:mb-6 leading-relaxed">
+                      <p className="text-sm text-[#525252] text-2 mb-3 md:mb-4 leading-relaxed">
                         {solution.description}
                       </p>
                       <a

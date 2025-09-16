@@ -158,8 +158,7 @@ export default function LocationSection() {
                   Balosh Integrated Services
                 </p>
                 <p className="text-sm text-gray-600">
-                  9, Osaro Isokpan street, Lekki Phase 1, Lagos 106104, Lagos,
-                  Nigeria
+                  9, Osaro Isokpan street, Lekki Phase 1, Lagos, Nigeria
                 </p>
               </div>
               <a

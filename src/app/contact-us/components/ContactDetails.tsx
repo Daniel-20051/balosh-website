@@ -102,8 +102,7 @@ export default function ContactDetails() {
                 </h3>
                 <p className="mt-2 text-base text-gray-600">
                   9, Osaro Isokpan street, Lekki Phase 1,
-                  <br /> Lagos 106104, Lagos
-                  <br /> Nigeria
+                  <br /> Lagos, Nigeria
                 </p>
                 <a
                   href="https://www.google.com/maps/dir/?api=1&destination=9%2C%20Osaro%20Isokpan%20street%2C%20Lekki%20Phase%201%2C%20Lagos%20106104%2C%20Lagos%2C%20Nigeria"

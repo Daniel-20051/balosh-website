@@ -3,98 +3,30 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#111827] text-white">
+    <footer className="bg-black text-white">
       {/* Main Footer */}
-      <div className="py-12">
+      <div className="py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Balosh Column */}
-            <div className="md:col-span-1">
-              <h4 className="text-2xl font-bold text-white mb-4">Balosh</h4>
-              <p className="text-white mb-6">
-                Innovative technology solutions for modern business challenges.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            {/* Company Info */}
+            <div className="lg:col-span-2">
+              <h4 className="text-2xl font-bold text-white mb-6">Balosh</h4>
+              <p className="text-gray-400 text-lg leading-relaxed mb-8 max-w-md">
+                We open important doors. Leading access control solutions that
+                transform how businesses secure and manage their facilities.
               </p>
-            </div>
 
-            {/* Quick Links */}
-            <div>
-              <h5 className="text-lg font-semibold text-white mb-4">
-                Quick Links
-              </h5>
-              <ul className="space-y-2">
-                <li>
-                  <Link
-                    href="/about"
-                    className="text-white hover:text-gray-300 transition-colors duration-200"
-                  >
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/solutions"
-                    className="text-white hover:text-gray-300 transition-colors duration-200"
-                  >
-                    Solutions
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/industries"
-                    className="text-white hover:text-gray-300 transition-colors duration-200"
-                  >
-                    Industries
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Resources */}
-            <div>
-              <h5 className="text-lg font-semibold text-white mb-4">
-                Resources
-              </h5>
-              <ul className="space-y-2">
-                <li>
-                  <Link
-                    href="/case-studies"
-                    className="text-white hover:text-gray-300 transition-colors duration-200"
-                  >
-                    Case Studies
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/blog"
-                    className="text-white hover:text-gray-300 transition-colors duration-200"
-                  >
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/support"
-                    className="text-white hover:text-gray-300 transition-colors duration-200"
-                  >
-                    Support Center
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Connect */}
-            <div>
-              <h5 className="text-lg font-semibold text-white mb-4">Connect</h5>
-              <div className="flex space-x-4">
+              {/* Social Links */}
+              <div className="flex space-x-6">
                 <a
                   href="https://www.linkedin.com/company/balosh-integrated-services/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-800 hover:bg-gray-700 transition-colors duration-200 p-2 rounded"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
                   aria-label="LinkedIn"
                 >
                   <svg
-                    className="w-5 h-5 text-white"
+                    className="w-6 h-6"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                   >
@@ -105,11 +37,11 @@ const Footer = () => {
                   href="https://x.com/baloshng"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-800 hover:bg-gray-700 transition-colors duration-200 p-2 rounded-full"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
                   aria-label="X (Twitter)"
                 >
                   <svg
-                    className="w-5 h-5 text-white"
+                    className="w-6 h-6"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                   >
@@ -120,11 +52,11 @@ const Footer = () => {
                   href="https://www.facebook.com/balosh1/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-800 hover:bg-gray-700 transition-colors duration-200 p-2 rounded-full"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
                   aria-label="Facebook"
                 >
                   <svg
-                    className="w-5 h-5 text-white"
+                    className="w-6 h-6"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                   >
@@ -135,11 +67,11 @@ const Footer = () => {
                   href="https://www.instagram.com/baloshng/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-800 hover:bg-gray-700 transition-colors duration-200 p-2 rounded-full"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
                   aria-label="Instagram"
                 >
                   <svg
-                    className="w-5 h-5 text-white"
+                    className="w-6 h-6"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                   >
@@ -148,20 +80,94 @@ const Footer = () => {
                 </a>
               </div>
             </div>
+
+            {/* Solutions */}
+            <div>
+              <h5 className="text-white font-semibold mb-6">Solutions</h5>
+              <ul className="space-y-4">
+                <li>
+                  <Link
+                    href="/solutions"
+                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                  >
+                    Access Control
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/solutions"
+                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                  >
+                    Security Systems
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/solutions"
+                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                  >
+                    Smart Infrastructure
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div>
+              <h5 className="text-white font-semibold mb-6">Company</h5>
+              <ul className="space-y-4">
+                <li>
+                  <Link
+                    href="/about-us"
+                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                  >
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/careers"
+                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                  >
+                    Careers
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact-us"
+                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Separator Line */}
-      <div className="border-t border-gray-600"></div>
-
-      {/* Copyright */}
-      <div className="py-6">
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-800 py-8">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center">
-            <p className="text-white text-sm">
-              © {new Date().getFullYear()} Balosh. All rights reserved.
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-gray-400 text-sm">
+              © {new Date().getFullYear()} Balosh Integrated Services. All
+              rights reserved.
             </p>
+            <div className="flex space-x-8 text-sm">
+              <Link
+                href="/privacy"
+                className="text-gray-400 hover:text-white transition-colors duration-200"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms"
+                className="text-gray-400 hover:text-white transition-colors duration-200"
+              >
+                Terms of Service
+              </Link>
+            </div>
           </div>
         </div>
       </div>

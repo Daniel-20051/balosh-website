@@ -59,7 +59,7 @@ export default function AboutSection() {
             text="About Balosh"
           />
           <h2 className="text-xl md:text-5xl font-bold text-gray-900 mt-8 mb-4">
-            Welcome to Balosh Integrated Services
+            Balosh Integrated Services
           </h2>
           <div className="w-24 h-1 bg-primary rounded-full mx-auto"></div>
         </div>

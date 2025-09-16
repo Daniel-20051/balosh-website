@@ -15,8 +15,8 @@ interface CarouselSlide {
 const carouselSlides: CarouselSlide[] = [
   {
     id: 1,
-    title: "Welcome to",
-    subtitle: "Balosh",
+    title: "We Open Important ",
+    subtitle: "Doors",
     description:
       "Leading access control solutions that open important doors for your business",
     image:
