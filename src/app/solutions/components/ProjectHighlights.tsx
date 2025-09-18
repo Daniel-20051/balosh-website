@@ -9,7 +9,7 @@ const projects = [
     title: "Dangote Refinery Commissioning",
     description:
       "Successfully deployed comprehensive ticketing and access control systems for the historic Dangote Refinery commissioning event, managing thousands of VIP attendees and dignitaries.",
-    image: "https://picsum.photos/400/250?random=10",
+    image: "/assets/dangote.jpg",
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10z" />
@@ -29,7 +29,7 @@ const projects = [
     title: "Davido's Timeless Concert",
     description:
       "Managed complete access control infrastructure for one of Africa's biggest concerts, ensuring secure and efficient entry for over 50,000 music fans at the iconic venue.",
-    image: "https://picsum.photos/400/250?random=11",
+    image: "/assets/davido.jpg",
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
@@ -48,7 +48,7 @@ const projects = [
     title: "Lagos Premium Estates",
     description:
       "Transformed security infrastructure across 10+ premium gated communities in Lagos, implementing smart gate automation and resident access management systems.",
-    image: "https://picsum.photos/400/250?random=12",
+    image: "/assets/estate.jpg",
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
@@ -175,14 +175,6 @@ export default function ProjectHighlights() {
                       {project.detailText}
                     </span>
                   </div>
-
-                  {/* Call to Action */}
-                  <a
-                    href={project.href}
-                    className="inline-flex items-center text-primary font-semibold text-xs md:text-sm hover:underline transition-colors duration-200"
-                  >
-                    View Details &rarr;
-                  </a>
                 </div>
               </div>
             </div>

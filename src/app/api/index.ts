@@ -18,6 +18,21 @@ export const getBlogs = async (page: number = 1, limit: number = 3) => {
     }
 }
 
+export const submitCareerApplication = async (formData: FormData) => {
+    try {
+        const response = await axios.post(`${BaseUrl}/careers/apply`, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
+        });
+       
+        return response.data;
+    } catch (error) {
+        console.log(error);
+        throw error;
+    }
+}
+
 
 export const getBlogsBySlug = async (slug: string) => {
     try {

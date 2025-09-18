@@ -1,9 +1,14 @@
 "use client";
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 import CustomSelect, { Option } from "./CustomSelect";
+import { submitCareerApplication } from "@/app/api";
 
 export default function ApplicationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [toast, setToast] = useState<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
 
   const roleOptions: Option[] = useMemo(
     () => [
@@ -39,24 +44,56 @@ export default function ApplicationForm() {
 
     try {
       setIsSubmitting(true);
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      alert("Application submitted successfully! We will be in touch.");
+      const payload = new FormData();
+      // Backend expects: firstName, lastName, phoneNumber, role, email, cv
+      payload.append("firstName", (formData.get("firstName") as string) || "");
+      payload.append("lastName", (formData.get("lastName") as string) || "");
+      payload.append("phoneNumber", (formData.get("phone") as string) || "");
+      payload.append("role", (formData.get("role") as string) || "");
+      payload.append("email", (formData.get("email") as string) || "");
+      payload.append("cv", file);
+
+      await submitCareerApplication(payload);
+      setToast({
+        type: "success",
+        message: "Application submitted! We'll be in touch.",
+      });
       form.reset();
     } catch (error) {
       console.error(error);
-      alert(
-        "There was a problem submitting your application. Please try again."
-      );
+      setToast({
+        type: "error",
+        message: "Submission failed. Please try again.",
+      });
     } finally {
       setIsSubmitting(false);
     }
   };
+
+  useEffect(() => {
+    if (!toast) return;
+    const timeoutId = setTimeout(() => setToast(null), 4000);
+    return () => clearTimeout(timeoutId);
+  }, [toast]);
 
   return (
     <form
       onSubmit={handleSubmit}
       className="space-y-8 flex max-w-5xl mx-auto my-15 flex-col rounded-2xl border-2 border-gray-100 bg-gray-50 p-6  md:p-8"
     >
+      {toast && (
+        <div
+          className={`fixed top-6 right-6 z-50 rounded-md px-4 py-3 text-sm shadow-md ${
+            toast.type === "success"
+              ? "bg-green-500 text-white"
+              : "bg-red-500 text-white"
+          }`}
+          role="status"
+          aria-live="polite"
+        >
+          {toast.message}
+        </div>
+      )}
       <div>
         <label
           htmlFor="cv"
@@ -112,6 +149,23 @@ export default function ApplicationForm() {
 
       <div>
         <label
+          htmlFor="email"
+          className="block text-sm font-medium text-gray-800"
+        >
+          Email <span className="text-red-500">*</span>
+        </label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          className="mt-2 block w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 shadow-sm focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500"
+          placeholder="jane.doe@example.com"
+        />
+      </div>
+
+      <div>
+        <label
           htmlFor="phone"
           className="block text-sm font-medium text-gray-800"
         >
@@ -122,7 +176,6 @@ export default function ApplicationForm() {
           name="phone"
           type="tel"
           inputMode="tel"
-          pattern="[0-9+\-()\s]{7,}"
           required
           className="mt-2 block w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 shadow-sm focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500"
           placeholder="+234 801 234 5678"
@@ -144,6 +197,28 @@ export default function ApplicationForm() {
           disabled={isSubmitting}
           className="inline-flex items-center cursor-pointer  justify-center rounded-lg bg-orange-500 px-6 py-3 text-white font-medium shadow-sm transition hover:bg-orange-600 disabled:opacity-60"
         >
+          {isSubmitting && (
+            <svg
+              className="-ml-1 mr-2 h-5 w-5 animate-spin text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                className="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+              ></circle>
+              <path
+                className="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+              ></path>
+            </svg>
+          )}
           {isSubmitting ? "Submitting..." : "Submit"}
         </button>
       </div>
