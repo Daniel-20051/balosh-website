@@ -86,7 +86,7 @@ export default function Home() {
       hoverBorderColor: "border-orange-200",
     },
     {
-      imageSrc: "/assets/car park.jpg",
+      imageSrc: "/assets/car-park.jpg",
       imageAlt: "Car Parking",
       title: "Car Parking",
       description:
@@ -103,7 +103,7 @@ export default function Home() {
       hoverBorderColor: "border-blue-200",
     },
     {
-      imageSrc: "/assets/entrance control.webp",
+      imageSrc: "/assets/entrance-control.webp",
       imageAlt: "Entrance Control",
       title: "Entrance Control",
       description:
@@ -120,7 +120,7 @@ export default function Home() {
       hoverBorderColor: "border-green-200",
     },
     {
-      imageSrc: "/assets/event-management 2.webp",
+      imageSrc: "/assets/event-management-2.webp",
       imageAlt: "Event Management",
       title: "Event Management",
       description:
@@ -137,7 +137,7 @@ export default function Home() {
       hoverBorderColor: "border-purple-200",
     },
     {
-      imageSrc: "/assets/maintenance service.png",
+      imageSrc: "/assets/maintenance-service.png",
       imageAlt: "Maintenance Services",
       title: "Maintenance Services",
       description:
@@ -154,7 +154,7 @@ export default function Home() {
       hoverBorderColor: "border-red-200",
     },
     {
-      imageSrc: "/assets/Toll gate management.jpg",
+      imageSrc: "/assets/toll-gate-management.jpg",
       imageAlt: "Toll Roads and Traffic Management",
       title: "Toll Roads and Traffic Management",
       description:
