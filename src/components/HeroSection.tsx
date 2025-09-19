@@ -26,7 +26,7 @@ const carouselSlides: CarouselSlide[] = [
   },
   {
     id: 2,
-    title: "Innovation in",
+    title: "Innovation in ",
     subtitle: "Security",
     description:
       "Cutting-edge technology that protects what matters most to your organization",
@@ -35,7 +35,7 @@ const carouselSlides: CarouselSlide[] = [
   },
   {
     id: 3,
-    title: "Trusted by",
+    title: "Trusted by ",
     subtitle: "Industry Leaders",
     description:
       "Serving Nigeria's top organizations with reliable access control since 2005",
@@ -44,7 +44,7 @@ const carouselSlides: CarouselSlide[] = [
   },
   {
     id: 4,
-    title: "Smart",
+    title: "Smart ",
     subtitle: "Infrastructure",
     description:
       "Building the future with intelligent systems that adapt to your needs",

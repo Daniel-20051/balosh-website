@@ -56,6 +56,11 @@ export default function OurJourney() {
       description:
         "Pioneered cloud-based security solutions and AI-powered access management",
     },
+    {
+      year: "2025",
+      title: "Company Expanded",
+      description: "Expanded to multiple locations across Nigeria",
+    },
   ];
 
   return (

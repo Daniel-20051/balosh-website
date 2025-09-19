@@ -5,7 +5,9 @@ import SectionHeader from "./ui/SectionHeader";
 import MarketCard from "./ui/MarketCard";
 
 interface Market {
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
+  imageSrc?: string;
+  imageAlt?: string;
   title: string;
   description: string;
 }
@@ -88,6 +90,8 @@ export default function MarketsSection({ markets }: MarketsSectionProps) {
             >
               <MarketCard
                 icon={market.icon}
+                imageSrc={market.imageSrc}
+                imageAlt={market.imageAlt}
                 title={market.title}
                 description={market.description}
               />

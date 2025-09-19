@@ -1,18 +1,21 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
-interface Solution {
-  icon: React.ReactNode;
+interface PopupSolution {
+  icon?: React.ReactNode;
   title: string;
   description: string;
   features: string[];
-  href: string;
-  iconBgColor: string;
+  href?: string;
+  iconBgColor?: string;
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
 interface SolutionPopupProps {
-  solution: Solution | null;
+  solution: PopupSolution | null;
   isOpen: boolean;
   onClose: () => void;
 }
@@ -138,14 +141,29 @@ export default function SolutionPopup({
         </button>
 
         {/* Header */}
-        <div className="flex items-start mb-6 p-6">
-          <div
-            className={`w-12 md:w-16 h-12 md:h-16 ${solution.iconBgColor} rounded-2xl flex items-center justify-center mr-6 shadow-lg`}
-          >
-            <div className="w-6 md:w-8 h-6 md:h-8 text-white">
-              {solution.icon}
-            </div>
+        {solution.imageSrc ? (
+          <div className="relative w-full h-48 md:h-60">
+            <Image
+              src={solution.imageSrc}
+              alt={solution.imageAlt || solution.title}
+              fill
+              className="object-cover"
+            />
           </div>
+        ) : null}
+
+        <div className="flex items-start mb-6 p-6">
+          {!solution.imageSrc && (
+            <div
+              className={`w-12 md:w-16 h-12 md:h-16 ${
+                solution.iconBgColor || "bg-orange-500"
+              } rounded-2xl flex items-center justify-center mr-6 shadow-lg`}
+            >
+              <div className="w-6 md:w-8 h-6 md:h-8 text-white">
+                {solution.icon}
+              </div>
+            </div>
+          )}
           <div className="flex-1">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
               {solution.title}
@@ -168,7 +186,9 @@ export default function SolutionPopup({
                 className="flex items-center p-3 bg-gray-50 rounded-lg"
               >
                 <div
-                  className={`w-2 h-2 ${solution.iconBgColor} rounded-full mr-3`}
+                  className={`w-2 h-2 ${
+                    solution.iconBgColor || "bg-orange-500"
+                  } rounded-full mr-3`}
                 ></div>
                 <span className="text-sm md:text-base text-gray-700 font-medium">
                   {feature}

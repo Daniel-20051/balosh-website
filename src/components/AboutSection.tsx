@@ -123,7 +123,7 @@ export default function AboutSection() {
             </p>
           </div>
 
-          {/* Core Values Card */}
+          {/* Core Values Card
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100 transform hover:scale-[1.02] transition-transform duration-300">
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 bg-primary/10 rounded-xl">
@@ -201,10 +201,10 @@ export default function AboutSection() {
                 <span>Customer Service</span>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Trust & Reputation Card */}
-          <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100 md:col-span-2 transform hover:scale-[1.02] transition-transform duration-300">
+          <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100 md:col-span-3 transform hover:scale-[1.02] transition-transform duration-300">
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 bg-primary/10 rounded-xl">
                 <svg

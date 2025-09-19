@@ -3,7 +3,6 @@ import "./globals.css";
 import { EB_Garamond, Inter } from "next/font/google";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
-import NewsLetter from "@/components/ui/NewsLetter";
 import WhatsAppWidget from "@/components/ui/WhatsAppWidget";
 
 // Garamond - Primary display typeface (serif)
@@ -45,7 +44,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
-        <NewsLetter />
+
         <Footer />
         <WhatsAppWidget />
       </body>

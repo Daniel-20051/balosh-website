@@ -5,14 +5,16 @@ import SectionHeader from "./ui/SectionHeader";
 import SolutionCard from "./ui/SolutionCard";
 
 interface Solution {
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   title: string;
   description: string;
   features: string[];
   href: string;
   linkColor: string;
   hoverBorderColor: string;
-  iconBgColor: string;
+  iconBgColor?: string;
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
 interface SolutionsSectionProps {
@@ -103,9 +105,11 @@ export default function SolutionsSection({
             >
               <SolutionCard
                 icon={solution.icon}
+                imageSrc={solution.imageSrc}
+                imageAlt={solution.imageAlt}
                 title={solution.title}
                 description={solution.description}
-                iconBgColor={solution.iconBgColor}
+                iconBgColor={solution.iconBgColor || "bg-orange-500"}
                 onClick={() => onSolutionClick(solution)}
               />
             </div>

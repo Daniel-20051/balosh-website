@@ -218,13 +218,13 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-3">
             <Link
               href="/"
-              className={`font-medium px-2 py-1 transition-colors duration-200 ${
+              className={`font-medium px-2 py-1 rounded-md transition-colors duration-200 ${
                 pathname === "/"
-                  ? " text-primary"
-                  : "text-gray-900 hover:text-primary"
+                  ? " bg-primary/10 text-primary"
+                  : "text-gray-900 hover:text-primary hover:bg-primary/10"
               }`}
             >
               Home
@@ -232,10 +232,10 @@ const Header = () => {
             <div className="relative group">
               <Link
                 href="/about-us"
-                className={`font-medium px-2 py-1 flex items-center gap-1 transition-colors duration-200 ${
+                className={`font-medium px-2 py-1 rounded-md flex items-center gap-1 transition-colors duration-200 ${
                   pathname === "/about-us"
-                    ? " text-primary"
-                    : "text-gray-900 group-hover:text-primary"
+                    ? " bg-primary/10 text-primary"
+                    : "text-gray-900 group-hover:text-primary group-hover:bg-primary/10"
                 }`}
               >
                 <span>About Us</span>
@@ -259,7 +259,7 @@ const Header = () => {
                 <div className="pointer-events-auto rounded-2xl shadow-2xl border border-gray-100 bg-white p-2 ring-1 ring-black/5">
                   <Link
                     href="/md-message"
-                    className="flex items-center gap-3 px-4 py-3 text-sm text-gray-800 rounded-lg hover:bg-gray-50 hover:text-primary transition-colors"
+                    className="flex items-center gap-3 px-4 py-3 text-sm text-gray-800 rounded-lg hover:bg-primary/10 hover:text-primary transition-colors"
                   >
                     <svg
                       className="w-4 h-4 text-gray-400"
@@ -278,7 +278,7 @@ const Header = () => {
                   <div className="h-2" />
                   <Link
                     href="/our-people"
-                    className="flex items-center gap-3 px-4 py-3 text-sm text-gray-800 rounded-lg hover:bg-gray-50 hover:text-primary transition-colors"
+                    className="flex items-center gap-3 px-4 py-3 text-sm text-gray-800 rounded-lg hover:bg-primary/10 hover:text-primary transition-colors"
                   >
                     <svg
                       className="w-4 h-4 text-gray-400"
@@ -298,40 +298,40 @@ const Header = () => {
             </div>
             <Link
               href="/solutions"
-              className={`font-medium px-2 py-1 transition-colors duration-200 ${
+              className={`font-medium px-2 py-1 rounded-md transition-colors duration-200 ${
                 pathname === "/solutions"
-                  ? " text-primary"
-                  : "text-gray-900 hover:text-primary"
+                  ? " bg-primary/10 text-primary"
+                  : "text-gray-900 hover:text-primary hover:bg-primary/10"
               }`}
             >
               Solutions
             </Link>
             <Link
               href="/blog"
-              className={`font-medium px-2 py-1 transition-colors duration-200 ${
+              className={`font-medium px-2 py-1 rounded-md transition-colors duration-200 ${
                 pathname === "/blog"
-                  ? " text-primary"
-                  : "text-gray-900 hover:text-primary"
+                  ? " bg-primary/10 text-primary"
+                  : "text-gray-900 hover:text-primary hover:bg-primary/10"
               }`}
             >
               Blog
             </Link>
             <Link
               href="/careers"
-              className={`font-medium px-2 py-1 transition-colors duration-200 ${
+              className={`font-medium px-2 py-1 rounded-md transition-colors duration-200 ${
                 pathname === "/careers"
-                  ? " text-primary"
-                  : "text-gray-900 hover:text-primary"
+                  ? " bg-primary/10 text-primary"
+                  : "text-gray-900 hover:text-primary hover:bg-primary/10"
               }`}
             >
               Careers
             </Link>
             <Link
               href="/contact-us"
-              className={`font-medium px-2 py-1 transition-colors duration-200 ${
+              className={`font-medium px-2 py-1 rounded-md transition-colors duration-200 ${
                 pathname === "/contact-us"
-                  ? " text-primary"
-                  : "text-gray-900 hover:text-primary"
+                  ? " bg-primary/10 text-primary"
+                  : "text-gray-900 hover:text-primary hover:bg-primary/10"
               }`}
             >
               Contact Us

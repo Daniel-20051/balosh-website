@@ -1,15 +1,21 @@
 "use client";
 
+import Image from "next/image";
+
 interface SolutionCardProps {
   title: string;
   description: string;
-  icon: React.ReactNode;
-  iconBgColor: string;
+  icon?: React.ReactNode;
+  iconBgColor?: string;
+  imageSrc?: string;
+  imageAlt?: string;
   onClick: () => void;
 }
 
 export default function SolutionCard({
   icon,
+  imageSrc,
+  imageAlt,
   title,
   description,
   iconBgColor,
@@ -17,7 +23,7 @@ export default function SolutionCard({
 }: SolutionCardProps) {
   return (
     <div
-      className="group relative bg-white rounded-3xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-orange-200 overflow-hidden h-full flex flex-col cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+      className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-orange-200 overflow-hidden h-full flex flex-col cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
       onClick={onClick}
     >
       {/* Background gradient overlay on hover */}
@@ -26,22 +32,37 @@ export default function SolutionCard({
       {/* Decorative corner element */}
       <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-orange-100/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-      <div className="relative z-10">
-        {/* Icon with enhanced styling */}
-        <div className="relative mb-8">
-          <div
-            className={`w-16 h-16 ${iconBgColor} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-xl`}
-          >
-            <div className="w-8 h-8 text-white transform group-hover:rotate-12 transition-transform duration-500">
-              {icon}
-            </div>
-          </div>
-          {/* Subtle glow effect */}
-          <div
-            className={`absolute -inset-2 ${iconBgColor} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 rounded-2xl`}
-          ></div>
+      {/* Visual header */}
+      {imageSrc ? (
+        <div className="relative h-40 md:h-48 w-full">
+          <Image
+            src={imageSrc}
+            alt={imageAlt || title}
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 384px, 100vw"
+          />
         </div>
+      ) : (
+        <div className="relative z-10 p-6 md:p-8">
+          {/* Icon with enhanced styling */}
+          <div className="relative mb-8">
+            <div
+              className={`w-16 h-16 ${iconBgColor} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-xl`}
+            >
+              <div className="w-8 h-8 text-white transform group-hover:rotate-12 transition-transform duration-500">
+                {icon}
+              </div>
+            </div>
+            {/* Subtle glow effect */}
+            <div
+              className={`absolute -inset-2 ${iconBgColor} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 rounded-2xl`}
+            ></div>
+          </div>
+        </div>
+      )}
 
+      <div className="relative z-10 p-6 md:p-8 pt-6">
         {/* Title with enhanced typography */}
         <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 group-hover:text-gray-800 transition-colors duration-300">
           {title}
