@@ -2,17 +2,14 @@
 
 import Badge from "@/components/ui/Badge";
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 const sectors = [
   {
     title: "Shopping Malls",
     description:
       "Advanced access control and crowd management systems for retail environments",
-    icon: (
-      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
-      </svg>
-    ),
+    image: "/assets/commercial.jpg",
     iconColor: "bg-orange-500",
     color: "bg-gradient-to-r from-[#F48125] to-[#FFB347]",
     insetColor: "bg-[#F48125]/10",
@@ -21,11 +18,7 @@ const sectors = [
     title: "Residential Estates",
     description:
       "Smart gate automation and security systems for gated communities",
-    icon: (
-      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-      </svg>
-    ),
+    image: "/assets/residential.jpg",
     iconColor: "bg-blue-500",
     color: "bg-gradient-to-r from-[#3B82F6] to-[#2563EB]",
     insetColor: "bg-[#3B82F6]/10",
@@ -33,11 +26,7 @@ const sectors = [
   {
     title: "Airports",
     description: "Comprehensive passenger flow and security management systems",
-    icon: (
-      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" />
-      </svg>
-    ),
+    image: "/assets/transport.webp",
     iconColor: "bg-green-500",
     color: "bg-gradient-to-r from-[#22C55E] to-[#16A34A]",
     insetColor: "bg-[#22C55E]/10",
@@ -46,11 +35,7 @@ const sectors = [
     title: "Healthcare",
     description:
       "Secure access control and patient flow management solutions made to measure",
-    icon: (
-      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H9v-2h4V7h2v4h4v2z" />
-      </svg>
-    ),
+    image: "/assets/healthcare.jpg",
     iconColor: "bg-red-500",
     color: "bg-gradient-to-r from-[#EF4444] to-[#DC2626]",
     insetColor: "bg-[#EF4444]/10",
@@ -58,11 +43,7 @@ const sectors = [
   {
     title: "Event Centers",
     description: "Large-scale ticketing and crowd control for major events",
-    icon: (
-      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-      </svg>
-    ),
+    image: "/assets/event-management.webp",
     iconColor: "bg-purple-500",
     color: "bg-gradient-to-r from-[#A855F7] to-[#9333EA]",
     insetColor: "bg-[#A855F7]/10",
@@ -70,11 +51,7 @@ const sectors = [
   {
     title: "Educational",
     description: "Student safety and campus access management systems",
-    icon: (
-      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
-      </svg>
-    ),
+    image: "/assets/education.jpg",
     iconColor: "bg-blue-600",
     color: "bg-gradient-to-r from-[#6366F1] to-[#4F46E5]",
     insetColor: "bg-[#6366F1]/10",
@@ -83,11 +60,7 @@ const sectors = [
     title: "Government",
     description:
       "High-security access control for sensitive government facilities",
-    icon: (
-      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10z" />
-      </svg>
-    ),
+    image: "/assets/public-sector.jpg",
     iconColor: "bg-yellow-500",
     color: "bg-gradient-to-r from-[#EAB308] to-[#CA8A04]",
     insetColor: "bg-[#EAB308]/10",
@@ -96,11 +69,7 @@ const sectors = [
     title: "Corporate",
     description:
       "Enterprise-grade security and automation for office buildings",
-    icon: (
-      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10z" />
-      </svg>
-    ),
+    image: "/assets/industrial.jpg",
     iconColor: "bg-teal-500",
     color: "bg-gradient-to-r from-[#14B8A6] to-[#0D9488]",
     insetColor: "bg-[#14B8A6]/10",
@@ -227,35 +196,30 @@ export default function TrustedSectors() {
               <div
                 className={`absolute h-24 w-24 md:h-30 md:w-30 -right-8 -top-8 md:-right-12 md:-top-12 ${sector.insetColor} rounded-full flex items-center justify-center mb-4 md:mb-6 mx-auto shadow-sm`}
               ></div>
-              <div className="group border-1 border-[#E5E5E5] bg-white rounded-2xl py-8 md:py-13 px-6 md:px-9 hover:shadow-lg transition-all duration-300 cursor-pointer">
-                {/* Icon with gradient background */}
-                <div
-                  className={`w-12 h-12 md:w-16 md:h-16 ${sector.color} rounded-xl flex items-center justify-center mb-4 md:mb-6 mx-auto shadow-sm`}
-                >
-                  <div className="text-white">
-                    {sector.title === "Shopping Malls" ? (
-                      <svg
-                        className="w-6 h-6 md:w-8 md:h-8"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                      </svg>
-                    ) : (
-                      sector.icon
-                    )}
-                  </div>
+              <div className="group border-1 border-[#E5E5E5] bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer">
+                {/* Image */}
+                <div className="relative h-32 md:h-40 w-full">
+                  <Image
+                    src={sector.image}
+                    alt={sector.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(min-width: 768px) 384px, 100vw"
+                  />
                 </div>
 
-                {/* Title */}
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 md:mb-4 text-center transition-colors duration-200">
-                  {sector.title}
-                </h3>
+                {/* Content */}
+                <div className="py-6 md:py-8 px-6 md:px-9">
+                  {/* Title */}
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 md:mb-4 text-center transition-colors duration-200">
+                    {sector.title}
+                  </h3>
 
-                {/* Description */}
-                <p className="text-xs md:text-sm text-[#525252] leading-relaxed text-center">
-                  {sector.description}
-                </p>
+                  {/* Description */}
+                  <p className="text-xs md:text-sm text-[#525252] leading-relaxed text-center">
+                    {sector.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

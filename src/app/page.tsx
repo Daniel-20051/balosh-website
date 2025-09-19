@@ -195,7 +195,7 @@ export default function Home() {
         "Government buildings, municipal facilities, and public institutions with secure access and visitor management.",
     },
     {
-      imageSrc: "/assets/education.jpeg.jpg",
+      imageSrc: "/assets/education.jpg",
       imageAlt: "Education",
       title: "Education",
       description:

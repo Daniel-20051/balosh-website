@@ -22,7 +22,7 @@ const solutions = [
     title: "Automated Entrances",
     description:
       "Sliding doors, swing gates, roller shutters, and retractable bollards for seamless access control.",
-    image: "/assets/automated-entrance.jpg",
+    image: "/assets/entrance-control.webp",
     badge: "AE",
     badgeColor: "bg-blue-400",
     icon: (
@@ -36,7 +36,7 @@ const solutions = [
     title: "Car Park Management",
     description:
       "Automated parking access, ticketing systems, and boom barriers for efficient vehicle management made to measure.",
-    image: "/assets/car-access.jpg",
+    image: "/assets/car-park.jpg",
     badge: "CP",
     badgeColor: "bg-green-500",
     icon: (
@@ -50,7 +50,7 @@ const solutions = [
     title: "Automatic Fare Collection",
     description:
       "Digital ticketing and access systems for high-traffic events and transport infrastructure made to measure.",
-    image: "/assets/fare-collection.jpg",
+    image: "/assets/ticketing-image.jpg",
     badge: "AF",
     badgeColor: "bg-purple-500",
     icon: (
@@ -64,7 +64,7 @@ const solutions = [
     title: "Traffic & Toll Management",
     description:
       "Vehicle barriers, road-side toll collection, and traffic control solutions for urban infrastructure.",
-    image: "/assets/traffic-managment.jpg",
+    image: "/assets/toll-gate-management-2.jpg",
     badge: "TT",
     badgeColor: "bg-red-500",
     icon: (
