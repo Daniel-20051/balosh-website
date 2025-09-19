@@ -344,10 +344,8 @@ const Header = () => {
               href="https://wa.me/2348022596060?text=Hello%20Balosh%2C%20I%27d%20like%20to%20request%20a%20demo."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-primary text-white shadow-md px-6 py-3  rounded-md hover:scale-110 transition-transform duration-200 font-medium"
-            >
-              Request a Demo
-            </a>
+              className=""
+            ></a>
           </div>
 
           {/* Mobile Menu Component */}
