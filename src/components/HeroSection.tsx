@@ -19,8 +19,7 @@ const carouselSlides: CarouselSlide[] = [
     subtitle: "Doors",
     description:
       "Leading access control solutions that open important doors for your business",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    image: "/assets/banner.mp4",
     ctaText: "Explore Solutions",
     ctaLink: "/solutions",
   },
@@ -30,8 +29,7 @@ const carouselSlides: CarouselSlide[] = [
     subtitle: "Security",
     description:
       "Cutting-edge technology that protects what matters most to your organization",
-    image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    image: "/assets/banner.mp4",
   },
   {
     id: 3,
@@ -39,8 +37,7 @@ const carouselSlides: CarouselSlide[] = [
     subtitle: "Industry Leaders",
     description:
       "Serving Nigeria's top organizations with reliable access control since 2005",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    image: "/assets/banner.mp4",
   },
   {
     id: 4,
@@ -48,8 +45,7 @@ const carouselSlides: CarouselSlide[] = [
     subtitle: "Infrastructure",
     description:
       "Building the future with intelligent systems that adapt to your needs",
-    image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    image: "/assets/banner.mp4",
   },
 ];
 
@@ -121,11 +117,17 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-80 md:h-screen overflow-hidden bg-gray-900">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed bg-no-repeat transition-all duration-700 ease-in-out"
-        style={{ backgroundImage: `url(${currentSlideData.image})` }}
-      >
+      {/* Background Video */}
+      <div className="absolute inset-0">
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/assets/banner.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
