@@ -53,7 +53,6 @@ export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const [videoFailed, setVideoFailed] = useState(false);
 
   const startInterval = () => {
     // Clear any existing interval
@@ -118,29 +117,17 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-80 md:h-screen overflow-hidden bg-gray-900">
-      {/* Background Video / Fallback Image */}
+      {/* Background Video */}
       <div className="absolute inset-0">
-        {!videoFailed ? (
-          <video
-            className="w-full h-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            poster="/assets/solution-image.png"
-            onError={() => setVideoFailed(true)}
-          >
-            <source src="/assets/banner.webm" type="video/webm" />
-            <source src="/assets/banner.mp4" type="video/mp4" />
-          </video>
-        ) : (
-          <div
-            className="w-full h-full bg-cover bg-center"
-            style={{ backgroundImage: "url(/assets/solution-image.png)" }}
-            aria-hidden="true"
-          />
-        )}
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/assets/banner.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
