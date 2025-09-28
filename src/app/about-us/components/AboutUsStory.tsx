@@ -90,10 +90,11 @@ export default function AboutUsStory() {
                     : "opacity-0 -translate-y-8"
                 }`}
               >
-                Founded in 2005, Balosh Integrated Services emerged from a
-                vision to revolutionize security technology in Nigeria. What
-                started as a small team of passionate engineers has grown into
-                the nation&apos;s leading access control company.
+                Founded in 2005, Balosh Integrated Services began with a bold
+                vision — to redefine security technology in Nigeria. What
+                started with a small team of passionate engineers has, over the
+                past 20 years, evolved into the nation’s leading name in access
+                control and smart security solutions.
               </p>
 
               <p
@@ -103,11 +104,11 @@ export default function AboutUsStory() {
                     : "opacity-0 -translate-y-8"
                 }`}
               >
-                Our journey has been marked by continuous innovation, unwavering
-                commitment to quality, and an unrelenting focus on customer
-                satisfaction. We&apos;ve secured numerous high-profile contracts
-                and built lasting partnerships with organizations across diverse
-                industries.
+                Our journey is built on innovation, quality, and customer trust.
+                From securing high-profile projects to forging long-term
+                partnerships across industries, we’ve consistently delivered
+                solutions that shape how businesses and institutions protect and
+                manage their spaces.
               </p>
             </div>
           </div>

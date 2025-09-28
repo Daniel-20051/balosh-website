@@ -75,10 +75,9 @@ export default function AboutUsHero() {
                 : "opacity-0 -translate-y-8"
             }`}
           >
-            For nearly two decades, Balosh has been at the forefront of access
-            control and security technology in Nigeria, transforming how
-            businesses secure and manage their facilities with cutting-edge
-            solutions.
+            For 20+ years, Balosh has been powering smarter security in Nigeria
+            — from access control to automation, we transform the way businesses
+            stay safe and in control.
           </p>
 
           {/* Call to Action Buttons */}

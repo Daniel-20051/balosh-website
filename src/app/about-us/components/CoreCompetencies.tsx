@@ -35,8 +35,7 @@ export default function CoreCompetencies() {
   const competencies = [
     {
       title: "Security Systems",
-      description:
-        "Advanced access control, biometric systems, and integrated security solutions",
+      description: "Smart access, powerful biometrics, seamless security.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 1L3 5v6c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V5l-9-4zM12 11.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
@@ -47,7 +46,7 @@ export default function CoreCompetencies() {
     {
       title: "Hardware Integration",
       description:
-        "Cutting-edge hardware deployment and seamless system integration",
+        "We specialize in cutting-edge hardware deployment and seamless system integration, delivering smart security solutions that work flawlessly together to enhance safety, efficiency, and control.”",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
           <path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9zM7 6h10v13H7V6zm2 2v9h2V8H9zm4 0v9h2V8h-2z" />
@@ -58,7 +57,7 @@ export default function CoreCompetencies() {
     {
       title: "Software Development",
       description:
-        "Custom software solutions for access control and security management",
+        "Delivering custom made software solutions that simplify access control and security management.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
           <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
@@ -68,8 +67,7 @@ export default function CoreCompetencies() {
     },
     {
       title: "Cloud Services",
-      description:
-        "Managed cloud infrastructure for secure and scalable access control",
+      description: "Seamless, scalable, and secure — all in the cloud.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
           <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" />

@@ -14,11 +14,11 @@ export default function SolutionsPage() {
           Innovative, Reliable, and Integrated Systems
         </h2>
         <p className="max-w-2xl mx-auto text-gray-700 text-sm md:text-base lg:text-lg px-4">
-          At Balosh, we deliver innovative, reliable, and integrated systems to
-          manage movement, access, and safety in physical spaces—whether for
-          buildings, events, or entire cities. Our solutions are designed to
-          enhance security while streamlining operations across diverse
-          environments.
+          At Balosh, we deliver innovative, reliable, and integrated systems
+          that manage movement, access, and safety across physical spaces — from
+          buildings and events to entire cities. Our solutions are built to
+          enhance security and streamline operations, creating smarter, safer,
+          and more efficient environments.
         </p>
       </section>
       <SolutionsGrid />

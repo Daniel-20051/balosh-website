@@ -13,8 +13,8 @@ type StatCard = {
 const stats: StatCard[] = [
   {
     title: "Proven Track Record",
-    subtitle: "17 years of experience",
-    body: "Balosh has developed solutions for every unique environment, establishing a legacy of reliability and innovation.",
+    subtitle: "20+ years of experience",
+    body: "Balosh has delivered tailored security solutions across diverse environments — building a lasting legacy of reliability, innovation, and trust.",
     icon: (
       <Image
         src="/assets/proven.svg"
@@ -27,7 +27,7 @@ const stats: StatCard[] = [
   {
     title: "Largest Portfolio",
     subtitle: "80% Market Share",
-    body: "You will find Balosh at most high‑profile locations, managing the largest car park portfolio in the region.",
+    body: "Balosh solutions are trusted at high-profile locations nationwide, managing the region’s largest portfolio of car parks with unmatched efficiency.",
     icon: (
       <Image
         src="/assets/largest.svg"
@@ -40,7 +40,7 @@ const stats: StatCard[] = [
   {
     title: "250+ Workforce",
     subtitle: "Spread across 20 locations",
-    body: "We have a dedicated workforce of over 250 staff, ensuring seamless operations and expert support everywhere.",
+    body: "Balosh delivers seamless operations and expert support across every project.",
     icon: (
       <Image
         src="/assets/workforce.svg"
@@ -53,7 +53,7 @@ const stats: StatCard[] = [
   {
     title: "100% Customer Satisfaction",
     subtitle: "We must be doing something right",
-    body: "We are yet to lose a customer. Our focus on quality service and client relationships is unwavering.",
+    body: "Balosh delivers 100% customer satisfaction through excellence, reliability, and trust.",
     icon: (
       <Image
         src="/assets/customer.svg"
@@ -110,9 +110,7 @@ export default function WhyBalosh() {
             Why Balosh?
           </h2>
           <p className="mx-auto mb-10  mt-3 max-w-3xl text-gray-600">
-            Discover the core strengths that make us the undisputed leader in
-            the industry. Our commitment to excellence is reflected in every
-            aspect of our service.
+            We open important doors
           </p>
           <Badge
             text="Why Balosh?"

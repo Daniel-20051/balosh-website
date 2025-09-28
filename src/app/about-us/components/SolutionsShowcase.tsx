@@ -42,7 +42,7 @@ export default function SolutionsShowcase() {
       badgeText: "Solutions",
       title: "Access Control Solutions",
       description:
-        "Our access control solutions are designed to enhance security, improve operational efficiency, and deliver exceptional value to our clients.",
+        "Our next-generation access control solutions are built to strengthen security, streamline operations, and deliver lasting value for our clients.",
     },
     {
       badgeIcon: (
@@ -53,7 +53,7 @@ export default function SolutionsShowcase() {
       badgeText: "Industries",
       title: "Industrial Solutions",
       description:
-        "Our industrial solutions are tailored to meet the unique security needs of various industries, including manufacturing, logistics, and healthcare.",
+        "From factory floors to hospital corridors, our industrial security solutions are designed to meet every challenge with precision and reliability.",
     },
   ];
 

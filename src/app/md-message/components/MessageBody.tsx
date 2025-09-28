@@ -6,10 +6,12 @@ import useReveal from "@/app/our-people/components/useReveal";
 export default function MessageBody() {
   const { ref, isVisible } = useReveal();
   const paragraphs = [
-    "As we look ahead to our 20th anniversary next July, this year marks a significant moment for Balosh Integrated Services! Our journey has been made possible by two vital pillars: our incredible customers and our committed employees.",
-    "We are immensely grateful for the trust our customers place in us. Their confidence – reflected in their continued business, referrals, and partnership – drives us to exceed expectations every day. Our dedicated employees embody this spirit of excellence, delivering services with remarkable quality and efficiency. Their unwavering commitment fills us with excitement for the bright future ahead.",
-    "In the past year, I have been particularly proud of our company’s resilience. Together, we have navigated unprecedented challenges and successfully expanded our range of solutions to address evolving needs. Our major projects not only showcase our capabilities but also highlight our dedication to innovation and service excellence.",
-    "As we approach our 20th anniversary, I want to extend my heartfelt gratitude to our employees, customers, and partners. Together, we are building a brighter future, and I am confident that Balosh Integrated Services will continue to thrive as we provide solutions that truly make a difference.",
+    "It is my honor to welcome you to Balosh Integrated Services Limited.",
+    "At Balosh, we believe control and accessibility should never be complicated because we understand that reliable systems form the foundation of trust and growth.",
+    "As the trusted specialist in access control and integrated solutions, our commitment is to deliver innovative, dependable, and scalable systems that safeguard not only people and assets, but also the integrity of the organizations we serve.",
+    "We don't just install systems; we build relationships based on trust. Every solution we provide is tailored to our clients' needs, because we understand that no two needs are the same. Our promise is to keep delivering solutions that are modern, efficient, and affordable, without compromising on quality.",
+    "Thank you for trusting Balosh to be part of your journey. Together, we can create smarter, safer spaces for everyone.",
+    "Think Balosh, think: Smart. Secure. Seamless.",
   ];
 
   return (
