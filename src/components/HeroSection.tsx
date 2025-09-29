@@ -53,6 +53,7 @@ export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   const startInterval = () => {
     // Clear any existing interval
@@ -77,6 +78,41 @@ export default function HeroSection() {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
       }
+    };
+  }, []);
+
+  // Attempt to ensure inline autoplay on iOS/Safari
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Force attributes required by iOS for autoplay
+    video.muted = true;
+    video.playsInline = true;
+
+    const tryPlay = () => {
+      void video.play().catch(() => {
+        // Fallback: wait for first user interaction
+        const onFirstInteraction = () => {
+          void video.play().catch(() => {});
+          window.removeEventListener("touchstart", onFirstInteraction);
+          window.removeEventListener("click", onFirstInteraction);
+        };
+        window.addEventListener("touchstart", onFirstInteraction, {
+          once: true,
+        });
+        window.addEventListener("click", onFirstInteraction, { once: true });
+      });
+    };
+
+    if (video.readyState >= 2) {
+      tryPlay();
+    } else {
+      video.addEventListener("loadeddata", tryPlay, { once: true });
+    }
+
+    return () => {
+      video.removeEventListener("loadeddata", tryPlay as any);
     };
   }, []);
 
@@ -120,11 +156,14 @@ export default function HeroSection() {
       {/* Background Video */}
       <div className="absolute inset-0">
         <video
+          ref={videoRef}
           className="w-full h-full object-cover"
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
+          controls={false}
         >
           <source
             src="https://lbizlohwnhivlmzzhxoo.supabase.co/storage/v1/object/public/blog-media/blogs/landing/hero.mp4"
