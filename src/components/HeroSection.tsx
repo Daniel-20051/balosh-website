@@ -126,7 +126,10 @@ export default function HeroSection() {
           loop
           playsInline
         >
-          <source src="/assets/banner.mp4" type="video/mp4" />
+          <source
+            src="https://lbizlohwnhivlmzzhxoo.supabase.co/storage/v1/object/public/blog-media/blogs/landing/hero.mp4"
+            type="video/mp4"
+          />
         </video>
         <div className="absolute inset-0 bg-black/50"></div>
       </div>

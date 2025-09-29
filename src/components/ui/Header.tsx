@@ -212,7 +212,8 @@ const Header = () => {
                 src="/logo-balosh.png"
                 alt="Balosh-Logo"
                 width={100}
-                height={40}
+                height={0}
+                style={{ height: "auto" }}
               />
             </Link>
           </div>
