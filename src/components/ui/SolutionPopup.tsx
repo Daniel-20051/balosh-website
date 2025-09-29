@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import Image from "next/image";
 
 interface PopupSolution {
@@ -47,7 +47,7 @@ export default function SolutionPopup({
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isOpen]);
+  }, [isOpen, onClose]);
 
   // Handle escape key to close
   useEffect(() => {
@@ -64,17 +64,17 @@ export default function SolutionPopup({
     return () => {
       document.removeEventListener("keydown", handleEscapeKey);
     };
-  }, [isOpen]);
+  }, [isOpen, onClose]);
 
   // Handle smooth close with animation
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setIsClosing(true);
     // Wait for animation to complete before actually closing
     setTimeout(() => {
       onClose();
       setIsClosing(false);
     }, 300); // Match the transition duration
-  };
+  }, [onClose]);
 
   // Handle opening animation
   useEffect(() => {

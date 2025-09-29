@@ -90,7 +90,7 @@ export default function HeroSection() {
     video.muted = true;
     video.playsInline = true;
 
-    const tryPlay = () => {
+    const tryPlay: () => void = () => {
       void video.play().catch(() => {
         // Fallback: wait for first user interaction
         const onFirstInteraction = () => {
@@ -112,7 +112,7 @@ export default function HeroSection() {
     }
 
     return () => {
-      video.removeEventListener("loadeddata", tryPlay as any);
+      video.removeEventListener("loadeddata", tryPlay);
     };
   }, []);
 
